@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
 import './Footer.scss';
+import Accordion from '../Accordion/Accordion';
 
 const Footer = () => {
   return (
@@ -8,10 +9,14 @@ const Footer = () => {
       <div className="container">
         <div className="footer__faq">
           <h2>FAQ</h2>
-          <div className="faq__item">
-            <h3>Question</h3>
-            <p>Answer</p>
-          </div>
+          <Accordion
+            title="Item 1 - Lorem ipsum dolor sit amet"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+          />
+          <Accordion
+            title="Item 2 - Lorem ipsum dolor sit amet"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+          />
         </div>
         <div className="footer__bottom">
           <div className="footer__list">
