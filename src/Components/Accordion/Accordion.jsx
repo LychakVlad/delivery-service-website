@@ -11,18 +11,11 @@ function Accordion(props) {
     setOpen(!open);
   };
 
-  //conditional styling
-  const styles = {
-    //if open is true, show content
-    accordionTitle: {
-      color: open ? '#10d6f5' : '#fff',
-    },
-  };
   //open animation with react spring
 
   const openAnimation = useSpring({
     from: { opacity: '0', maxHeight: '25px' },
-    to: { opacity: '1', maxHeight: open ? '120px' : '25px' },
+    to: { opacity: '1', maxHeight: open ? '100%' : '25px' },
     config: { duration: '300' },
   });
 
@@ -34,7 +27,7 @@ function Accordion(props) {
     },
     to: {
       transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
-      color: open ? '#10d6f5' : '#fff',
+      color: open ? '#000' : '#000',
     },
     config: { duration: '120' },
   });
@@ -42,7 +35,7 @@ function Accordion(props) {
   return (
     <animated.div className="accordion__item" style={openAnimation}>
       <div className="accordion__header" onClick={toggleHandler}>
-        <h4 style={styles.accordionTitle}>{props.title}</h4>
+        <h4>{props.title}</h4>
         <animated.i style={iconAnimation}>
           <ExpandMoreIcon />
         </animated.i>
