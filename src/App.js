@@ -1,6 +1,6 @@
-import CallBackForm from './Components/CallBackForm/CallBackForm';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
+import CallBackForm from './components/CallBackForm/CallBackForm';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
   return (

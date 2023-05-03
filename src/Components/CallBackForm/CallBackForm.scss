@@ -9,7 +9,13 @@
 }
 
 .call-back__wrapper {
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   max-width: 446px;
+
+  h2 {
+    text-align: center;
+  }
 }
