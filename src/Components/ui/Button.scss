@@ -1,0 +1,19 @@
+@import '../../sassStyles/variables.scss';
+
+.button {
+  cursor: pointer;
+  border: transparent;
+  background-color: $BGBlue;
+  color: $textPrimaryWhite;
+  padding: 14px 8px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #004ed6;
+  }
+
+  &:active {
+    background-color: #003ead;
+  }
+}

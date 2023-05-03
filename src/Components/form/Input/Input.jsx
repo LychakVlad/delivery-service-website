@@ -21,11 +21,11 @@ const Input = ({ value, label, name, placeholder, type, onChange }) => {
         type={type}
         value={value}
         name={name}
-        className={`form-control${isFilled ? ' filled' : ''}`}
+        className={`form-control ${isFilled ? 'filled' : ''}`}
         placeholder={placeholder}
         onChange={handleInputChange}
       />
-      {label && <label htmlFor="input-field">{label}</label>}
+      {label && <label htmlFor={name}>{label}</label>}
       {isFilled && (
         <span className="cross-icon" onClick={handleClearInput}>
           <CloseIcon />
