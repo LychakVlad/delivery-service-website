@@ -1,6 +1,9 @@
+@import '../../../sassStyles/variables.scss';
+
 .checkbox-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 16px;
 
   &:last-child {
@@ -27,6 +30,9 @@
     position: relative;
     cursor: pointer;
 
+    &.error {
+      border: 1px solid $warningColor;
+    }
     &:checked {
       border-color: #2e86de;
       background-color: #2e86de;
@@ -50,4 +56,10 @@
     font-size: 16px;
     color: #333;
   }
+}
+
+.error-message__checkbox-form {
+  color: $warningColor;
+  margin-left: 32px;
+  margin-top: 4px;
 }

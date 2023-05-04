@@ -6,6 +6,8 @@ import Button from '../ui/Button';
 import CheckBox from '../form/checkbox/CheckBox';
 
 const CallBackForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+
   const [inputValue, setInputValue] = useState({
     name: '',
     tel: '',
@@ -13,11 +15,11 @@ const CallBackForm = () => {
     isAgree1: false,
     isAgree2: false,
   });
+
   const [errors, setErrors] = useState({
     name: '',
     email: '',
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const { name, tel, email, isAgree1, isAgree2 } = inputValue;
 
@@ -38,8 +40,9 @@ const CallBackForm = () => {
       name.length < 2 ? 'Name should be at least 2 characters long' : '';
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     const emailError = !emailRegex.test(email) ? 'Invalid email address' : '';
-    setErrors({ name: nameError, email: emailError });
-    if (!nameError && !emailError) {
+    const checkboxError = isAgree1 ? '' : 'You must agree to the terms';
+    setErrors({ name: nameError, email: emailError, checkbox: checkboxError });
+    if (!nameError && !emailError && !checkboxError) {
       setSubmitted(true);
       setInputValue({
         name: '',
@@ -91,6 +94,8 @@ const CallBackForm = () => {
                 onChange={handleChange}
                 name="isAgree1"
                 label="I consent to the processing of personal data in accordance with the Terms of Personal Data Processing."
+                required={true}
+                error={errors.checkbox}
               />
               <CheckBox
                 checked={isAgree2}
