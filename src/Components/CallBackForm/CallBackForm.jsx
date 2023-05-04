@@ -13,10 +13,19 @@ const CallBackForm = () => {
     isAgree1: false,
     isAgree2: false,
   });
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
   const { name, tel, email, isAgree1, isAgree2 } = inputValue;
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
+
+    setErrors('');
+
     setInputValue({
       ...inputValue,
       [name]: type === 'checkbox' ? checked : value,
@@ -25,14 +34,28 @@ const CallBackForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputValue);
+    const nameError =
+      name.length < 2 ? 'Name should be at least 2 characters long' : '';
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    const emailError = !emailRegex.test(email) ? 'Invalid email address' : '';
+    setErrors({ name: nameError, email: emailError });
+    if (!nameError && !emailError) {
+      setSubmitted(true);
+      setInputValue({
+        name: '',
+        tel: '',
+        email: '',
+        isAgree1: false,
+        isAgree2: false,
+      });
+    }
   };
 
   return (
     <div className="call-back">
       <div className="call-back__wrapper">
         <SecondTitle title="We're on our way" />
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="call-back__form">
             <Input
               type="text"
@@ -41,14 +64,19 @@ const CallBackForm = () => {
               name="name"
               label="How do I address you?"
               required
+              error={errors.name}
             />
+
             <Input
               type="email"
               value={email}
               onChange={handleChange}
               name="email"
               label="E-mail"
+              required
+              error={errors.email}
             />
+
             <Input
               type="tel"
               value={tel}
@@ -56,7 +84,7 @@ const CallBackForm = () => {
               name="tel"
               label="Phone"
             />
-            <Button>Call me</Button>
+            <Button onClick={handleSubmit}>Call me</Button>
             <div>
               <CheckBox
                 checked={isAgree1}

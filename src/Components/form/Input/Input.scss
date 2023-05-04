@@ -70,4 +70,14 @@
     color: $textGray;
     cursor: pointer;
   }
+
+  &.error {
+    border: solid 1px $warningColor;
+  }
+}
+
+.error-message {
+  padding-left: 16px;
+  margin-top: 8px;
+  color: $warningColor;
 }
