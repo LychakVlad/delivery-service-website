@@ -1,0 +1,11 @@
+@import '../../sassStyles/variables.scss';
+
+.top-menu {
+  background-color: $BGBlue;
+  padding-bottom: 56px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

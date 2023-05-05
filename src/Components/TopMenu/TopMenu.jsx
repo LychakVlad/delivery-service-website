@@ -1,13 +1,15 @@
 import React from 'react';
 import './TopMenu.scss';
+import MainMenu from '../MainMenu/MainMenu';
+import TrackDelivery from '../TrackDelivery/TrackDelivery';
 
 const TopMenu = () => {
   return (
     <div className="top-menu">
       <div className="container">
-        <div className="topm-menu__wrapper">
-          <div>MainMenu</div>
-          <div>TrackDelivery</div>
+        <div className="top-menu__wrapper">
+          <MainMenu />
+          <TrackDelivery />
         </div>
       </div>
     </div>
