@@ -11,6 +11,7 @@ const Input = ({
   onChange,
   required,
   error,
+  className,
 }) => {
   const [isFilled, setIsFilled] = useState(false);
 
@@ -28,7 +29,11 @@ const Input = ({
 
   return (
     <div>
-      <div className={`input-container ${error ? 'error' : ''}`}>
+      <div
+        className={`input-container  ${error ? 'error' : ''} ${
+          className ? className : ''
+        }`}
+      >
         <input
           type={type}
           value={value}

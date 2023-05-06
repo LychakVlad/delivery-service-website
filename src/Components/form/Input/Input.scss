@@ -74,6 +74,77 @@
   &.error {
     border: solid 1px $warningColor;
   }
+
+  &--transparent {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding-right: 20px;
+
+    &:hover {
+      border: none;
+    }
+
+    &:focus-within {
+      background-color: rgba(255, 255, 255, 0.3);
+      input:not(:empty) + label {
+        color: $textGray;
+        transform: translateY(-100%) scale(0.75);
+      }
+    }
+
+    label {
+      pointer-events: none;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      transform-origin: left top;
+      user-select: none;
+      transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 150ms cubic-bezier(0.4, 0, 0.2, 1), top 300ms;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      transition: border 300ms;
+      padding: 20px 16px 6px;
+
+      &:focus {
+        outline: none;
+        border-bottom-width: 2px;
+
+        + {
+          label {
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-100%) scale(0.75);
+          }
+        }
+      }
+
+      &.filled + label {
+        color: rgba(255, 255, 255, 0.7);
+        transform: translateY(-100%) scale(0.75);
+      }
+    }
+
+    .cross-icon {
+      position: absolute;
+      right: 5%;
+      top: 30%;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+    }
+
+    &.error {
+      border: solid 1px $warningColor;
+    }
+  }
 }
 
 .error-message {
