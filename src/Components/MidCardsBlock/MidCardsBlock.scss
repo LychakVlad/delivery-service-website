@@ -1,0 +1,58 @@
+@import '../../sassStyles/variables.scss';
+
+.mid-cards {
+  position: relative;
+  padding-top: 56px;
+
+  &__block {
+    display: flex;
+    gap: 24px;
+    margin: 32px 0px 24px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__background {
+    position: absolute;
+    min-width: 100vw;
+    height: 190px;
+    top: 0;
+    left: 0;
+    border-radius: 0px 0px 60px 60px;
+    background-color: $BGBlue;
+  }
+}
+
+.mid-card-item {
+  background-color: cornflowerblue;
+  border-radius: 40px;
+  padding: 32px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+
+  &__link {
+    margin-top: 24px;
+    a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    max-width: 150px;
+    max-height: 100px;
+    position: absolute;
+
+    bottom: 0;
+    right: 10%;
+  }
+}

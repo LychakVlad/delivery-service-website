@@ -1,6 +1,7 @@
 @import '../../sassStyles/variables.scss';
 
 .button {
+  width: 100%;
   cursor: pointer;
   border: transparent;
   background-color: $BGBlue;
@@ -31,7 +32,11 @@
   }
 
   &--w-111 {
-    min-width: 111px;
+    max-width: 111px;
+  }
+
+  &--w-272 {
+    max-width: 272px;
   }
 
   &--w-full {
