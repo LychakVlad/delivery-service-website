@@ -78,4 +78,63 @@
     gap: 12px;
     margin-bottom: 24px;
   }
+
+  &__total {
+    margin-top: 24px;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+  }
+
+  &__time-option {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  &__time-days {
+    font-weight: 375;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #5a6c7d;
+  }
+  &__time-text {
+    font-weight: 375;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  &__total-price {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+    margin-bottom: 20px;
+  }
+
+  &__total-plan-list {
+    list-style: none;
+    padding-left: 20px;
+    max-width: 280px;
+  }
+
+  &__total-plan-point {
+    font-weight: 375;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    position: relative;
+    margin-bottom: 12px;
+
+    &::before {
+      content: '';
+      background-image: url(../../assets/check-list.svg);
+      position: absolute;
+      top: 0;
+      left: -24px;
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
