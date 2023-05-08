@@ -12,6 +12,7 @@ const Input = ({
   required,
   error,
   className,
+  description,
 }) => {
   const [isFilled, setIsFilled] = useState(false);
 
@@ -53,6 +54,7 @@ const Input = ({
           </span>
         )}
       </div>
+      {description && <div className="input-description">{description}</div>}
       {error && <div className="error-message">{error}</div>}
     </div>
   );

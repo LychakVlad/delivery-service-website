@@ -1,0 +1,81 @@
+@import '../../sassStyles/variables.scss';
+
+.calculator {
+  &__wrapper {
+    background-color: $BGGray;
+    padding: 60px;
+    border-radius: 40px;
+    margin-top: 56px;
+  }
+  &__destination {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 56px;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  &__size-block {
+    margin-top: 44px;
+  }
+  &__toggle {
+    margin: 16px 0px 24px;
+  }
+  &__sizes {
+    display: flex;
+    gap: 20px;
+  }
+  &__size {
+    background-color: white;
+    padding: 16px;
+    border-radius: 20px;
+    height: 120px;
+    width: 120px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    transition: border 0.3s ease;
+
+    &.is-active {
+      border: 1px solid $BGBlue;
+    }
+  }
+  &__size-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__size-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+  }
+  &__size-icon {
+    width: 32px;
+  }
+  &__size-bottom {
+  }
+  &__size-size {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+  }
+  &__size-weight {
+    font-weight: 375;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+
+  &__measure {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+}
