@@ -145,21 +145,21 @@ const Calculator = () => {
                   <img src={Icon} alt="icon" />
                   <div className="calculator__time-right">
                     <p className="calculator__time-text">Post Office</p>
-                    <p className="calculator__time-days">7-14 days</p>
+                    <p className="calculator__time-days">Est. 14 days</p>
                   </div>
                 </div>
                 <div className="calculator__time-option">
                   <img src={Icon} alt="icon" />
                   <div className="calculator__time-right">
-                    <p className="calculator__time-text">Post Office</p>
-                    <p className="calculator__time-days">7-14 days</p>
+                    <p className="calculator__time-text">Pickup point</p>
+                    <p className="calculator__time-days">Est. 10 days</p>
                   </div>
                 </div>
                 <div className="calculator__time-option">
                   <img src={Icon} alt="icon" />
                   <div className="calculator__time-right">
-                    <p className="calculator__time-text">Post Office</p>
-                    <p className="calculator__time-days">7-14 days</p>
+                    <p className="calculator__time-text">By courier</p>
+                    <p className="calculator__time-days">Est. 6 days</p>
                   </div>
                 </div>
               </div>

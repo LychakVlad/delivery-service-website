@@ -90,6 +90,7 @@
     display: flex;
     gap: 12px;
     margin-bottom: 12px;
+    padding-top: 12px;
   }
   &__time-days {
     font-weight: 375;
@@ -99,10 +100,11 @@
     color: #5a6c7d;
   }
   &__time-text {
-    font-weight: 375;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.4px;
+    margin-bottom: 8px;
   }
 
   &__total-price {
@@ -110,7 +112,12 @@
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 0.6px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    padding-top: 12px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 
   &__total-plan-list {
