@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Toggle.scss';
 
-const Toggle = () => {
+const Toggle = ({ clickHandle }) => {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
+    clickHandle();
     setActive(!active);
   };
 

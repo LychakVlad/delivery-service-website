@@ -1,10 +1,12 @@
 import React from 'react';
 
-const CalculatorItem = ({ key, settings, active, onClick }) => {
+const CalculatorItem = ({ key, settings, active, onClick, calcItemError }) => {
   return (
     <div
       id={key}
-      className={`calculator__size ${active ? 'is-active' : ''} `}
+      className={`calculator__size ${active ? 'is-active' : ''} ${
+        calcItemError ? 'is-error' : ''
+      } `}
       onClick={onClick}
     >
       <div className="calculator__size-top">
