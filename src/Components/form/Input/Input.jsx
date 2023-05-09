@@ -21,6 +21,12 @@ const Input = ({
   }, [value]);
 
   const handleInputChange = (event) => {
+    if (type === 'number') {
+      const inputValue = event.target.value;
+      if (inputValue < 0) {
+        return;
+      }
+    }
     onChange(event);
   };
 
@@ -55,7 +61,12 @@ const Input = ({
         )}
       </div>
       {description && <div className="input-description">{description}</div>}
-      {error && <div className="error-message">{error}</div>}
+      {name === 'width' ||
+      name === 'height' ||
+      name === 'length' ||
+      name === 'weight'
+        ? ''
+        : error && <div className="error-message">{error}</div>}
     </div>
   );
 };

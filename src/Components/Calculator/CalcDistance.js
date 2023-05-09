@@ -16,5 +16,3 @@ export function CalcDistance(lat1, lon1, lat2, lon2) {
   const distance = earthRadius * c;
   return distance;
 }
-
-// Math.ceil(distance)

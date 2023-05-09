@@ -36,8 +36,15 @@ const AutocompleteInput = ({
           `https://nominatim.openstreetmap.org/search?q=${searchTerm}&format=json&extratags=place_id,display_name,type,lat,lon&accept-language=en&countrycodes=us`
         )
         .then((response) => {
-          setSuggestions(response.data);
-          setError(!response.data.find((s) => s.display_name === searchTerm));
+          const suggestions = response.data;
+          setSuggestions(suggestions);
+          setError(!suggestions.find((s) => s.display_name === searchTerm));
+          if (
+            suggestions.length > 0 &&
+            suggestions[0].display_name === searchTerm
+          ) {
+            handleSelect(suggestions[0]);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -91,7 +98,7 @@ const AutocompleteInput = ({
           </span>
         )}
       </div>
-      {loading && (
+      {loading && suggestions.length === 0 && (
         <ul className="input-suggestions__list">
           <li className="input-suggestions__loading-block">
             <CircularProgress />
@@ -99,7 +106,7 @@ const AutocompleteInput = ({
           </li>
         </ul>
       )}
-      {suggestions.length > 0 && (
+      {!loading && suggestions.length > 0 && (
         <ul className="input-suggestions__list">
           {suggestions.map((suggestion) => (
             <li
@@ -112,6 +119,7 @@ const AutocompleteInput = ({
           ))}
         </ul>
       )}
+
       {description && <div className="input-description">{description}</div>}
     </div>
   );

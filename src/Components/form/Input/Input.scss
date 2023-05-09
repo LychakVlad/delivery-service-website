@@ -11,7 +11,6 @@
   height: 56px;
   transition: border 300ms;
   border: solid 1px $StrGray;
-  padding-right: 28px;
 
   &:hover {
     border: solid 1px $StrSecondGray;
@@ -47,7 +46,7 @@
     border: transparent;
     color: $textPrimaryBlack;
     transition: border 300ms;
-    padding: 20px 16px 6px;
+    padding: 20px 40px 6px 16px;
 
     &:focus {
       outline: none;
@@ -148,6 +147,12 @@
     &.error {
       border: solid 1px $warningColor;
     }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
