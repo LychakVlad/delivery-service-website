@@ -131,7 +131,13 @@ const Calculator = () => {
         setCalcItemError(true);
       }
 
-      if (activeId === null || errorFrom || errorTo) {
+      if (
+        activeId === null ||
+        errorFrom ||
+        errorTo ||
+        cityFrom === '' ||
+        cityTo === ''
+      ) {
         setShowTotal(false);
       } else {
         setShowTotal(true);
@@ -156,7 +162,13 @@ const Calculator = () => {
         }
       });
 
-      if (errorFrom || errorTo || hasErrors) {
+      if (
+        errorFrom ||
+        errorTo ||
+        hasErrors ||
+        cityFrom === '' ||
+        cityTo === ''
+      ) {
         setShowTotal(false);
       } else {
         setShowTotal(true);
