@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Toggle.scss';
 
-const Toggle = ({ clickHandle }) => {
+const Toggle = ({ clickHandle, firstTitle, secondTitle }) => {
   const [active, setActive] = useState(false);
 
   const handleToggle = () => {
@@ -11,9 +11,9 @@ const Toggle = ({ clickHandle }) => {
 
   return (
     <div className={`toggle ${active ? 'active' : ''}`} onClick={handleToggle}>
-      <span className="toggle-label">Estimated</span>
+      <span className="toggle-label">{firstTitle}</span>
       <div className="toggle-ball"></div>
-      <span className="toggle-label">Exactly</span>
+      <span className="toggle-label">{secondTitle}</span>
     </div>
   );
 };

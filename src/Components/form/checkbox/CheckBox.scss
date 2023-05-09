@@ -55,6 +55,7 @@
   .checkbox__label {
     font-size: 16px;
     color: #333;
+    cursor: pointer;
   }
 }
 
@@ -62,4 +63,16 @@
   color: $warningColor;
   margin-left: 32px;
   margin-top: 4px;
+}
+
+.description__checkbox-form {
+  font-style: normal;
+  font-weight: 375;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  margin-top: 8px;
+  margin-left: 32px;
+  color: #5a6c7d;
 }

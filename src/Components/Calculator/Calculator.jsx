@@ -214,7 +214,11 @@ const Calculator = () => {
           <div className="calculator__size-block">
             <ThirdTitle title="Package size" />
             <div className="calculator__toggle">
-              <Toggle clickHandle={handleToggle} />
+              <Toggle
+                clickHandle={handleToggle}
+                firstTitle="Estimated"
+                secondTitle="Exactly"
+              />
             </div>
             {activeTab === 'measure' && (
               <CalculatorValues
