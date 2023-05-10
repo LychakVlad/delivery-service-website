@@ -17,17 +17,15 @@ const MapMenu = ({
   setMainCoords,
   cityFind,
   setCityFind,
-  handleChangeCityFind,
 }) => {
   const toggleHandle = () => {
-    console.log('w');
+    console.log('toggle');
   };
   return (
     <div className="map-menu">
       <AutocompleteInput
         type="text"
         value={cityFind}
-        onChange={handleChangeCityFind}
         name="to"
         label="Find City"
         required

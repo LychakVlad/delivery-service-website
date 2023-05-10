@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Map.scss';
 import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import SecondTitle from '../ui/titles/SecondTitle';
 import { Icon, divIcon, point } from 'leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
@@ -14,12 +14,12 @@ const Map = () => {
   const [byCardOnReceipt, setByCardOnReceipt] = useState(false);
   const [byCashOnReceipt, setByCashOnReceipt] = useState(false);
   const [filteredMarkers, setFilteredMarkers] = useState(pickupPoints);
-  const [mainCoords, setMainCoords] = useState({ lat: '', lon: '' });
+  const [mainCoords, setMainCoords] = useState({
+    lat: 38.889,
+    lon: -77.0569,
+  });
   const [cityFind, setCityFind] = useState('');
-
-  const handleChangeCityFind = (event) => {
-    setCityFind(event.target.value);
-  };
+  const [centralPosition, setCentralPosition] = useState([38.889, -77.0569]);
 
   useEffect(() => {
     let newMarkers = pickupPoints.filter((pickup) => {
@@ -39,7 +39,14 @@ const Map = () => {
       return showMarker;
     });
     setFilteredMarkers(newMarkers);
-  }, [postOffices, selfPickup, byCardOnReceipt, byCashOnReceipt]);
+  }, [postOffices, selfPickup, byCardOnReceipt, byCashOnReceipt, mainCoords]);
+
+  useEffect(() => {
+    const mainCoordsArray = Object.values(mainCoords).map((coord) =>
+      Number(coord)
+    );
+    setCentralPosition(mainCoordsArray);
+  }, [mainCoords]);
 
   const customIcon = new Icon({
     iconUrl: 'https://img.icons8.com/?size=512&id=sxPBKmDA7kZP&format=png',
@@ -53,7 +60,13 @@ const Map = () => {
       iconSize: point(34, 34, true),
     });
   };
-  const centralPosition = [38.889, -77.0569];
+
+  function SetViewOnClick({ centralPosition }) {
+    const map = useMap();
+    map.setView(centralPosition, map.getZoom());
+
+    return null;
+  }
 
   return (
     <div className="map">
@@ -86,6 +99,7 @@ const Map = () => {
                 </Marker>
               ))}
             </MarkerClusterGroup>
+            <SetViewOnClick centralPosition={centralPosition} />
           </MapContainer>
         </div>
         <MapMenu
@@ -100,7 +114,6 @@ const Map = () => {
           setMainCoords={setMainCoords}
           cityFind={cityFind}
           setCityFind={setCityFind}
-          handleChangeCityFind={handleChangeCityFind}
         />
       </div>
     </div>
