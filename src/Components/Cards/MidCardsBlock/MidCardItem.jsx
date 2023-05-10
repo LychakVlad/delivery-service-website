@@ -1,6 +1,6 @@
 import React from 'react';
 import './MidCardsBlock.scss';
-import ThirdTitle from '../ui/titles/ThirdTitle';
+import ThirdTitle from '../../ui/titles/ThirdTitle';
 
 const MidCardItem = ({ title, button, img }) => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import './MidCardsBlock.scss';
-import SecondTitle from '../ui/titles/SecondTitle';
-import Button from '../ui/Button';
+import SecondTitle from '../../ui/titles/SecondTitle';
+import Button from '../../ui/Button';
 import MidCardItem from './MidCardItem';
-import CardIcon from '../../assets/card-icon.svg';
+import CardIcon from '../../../assets/card-icon.svg';
 
 const MidCardsBlock = () => {
   const content = {
