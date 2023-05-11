@@ -6,6 +6,7 @@ import MidCardsBlock from './components/Cards/MidCardsBlock/MidCardsBlock';
 import SmallCardsBlock from './components/Cards/SmallCardsBlock/SmallCardsBlock';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import IconsSection from './components/IconsSection/IconsSection';
 import Map from './components/Map/Map';
 import MenuList from './components/MenuList/MenuList';
 
@@ -24,6 +25,7 @@ function App() {
         <SmallCardsBlock />
         <MenuList />
         <BigSlider />
+        <IconsSection />
         <CallBackForm />
       </div>
       <Footer />
