@@ -1,12 +1,16 @@
 import React from 'react';
 import ThirdTitle from '../ui/titles/ThirdTitle';
+import Photo from '../../assets/photo.jpg';
 
 const BigSlide = () => {
   return (
     <div className="big-slide">
-      <img src="" alt="" className="big-slide__img" />
+      <div className="big-slide__img-wrapper">
+        <img src={Photo} alt="photo" className="big-slide__img" />
+      </div>
+
       <ThirdTitle title="Mike Polo" />
-      <p className="big-slide__company">Amazon</p>
+      <p className="big-slide__text">Amazon</p>
       <p className="big-slide__rank">Head of Buyer's Orders Department </p>
       <p className="big-slide__text">
         I would like to express my gratitude to the logistics company that has
