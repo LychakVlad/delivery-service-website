@@ -15,7 +15,7 @@ const SmallCardsBlock = () => {
     <div className="small-cards">
       <div className="container">
         <div className="small-cards__wrapper">
-          <SecondTitle title="More perks" />
+          <SecondTitle title="Easy integration" />
           <div className="small-cards__block">
             <SmallCardsItem
               title={content.first.title}

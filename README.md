@@ -1,1 +1,1 @@
-make the calculator work
+do smth with second toggle on calculator

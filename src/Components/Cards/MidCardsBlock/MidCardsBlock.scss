@@ -41,9 +41,15 @@
 
   &__link {
     margin-top: 24px;
+    transition: color 0.3s ease;
+
     a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.979);
+      }
     }
   }
 
