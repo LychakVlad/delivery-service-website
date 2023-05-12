@@ -1,12 +1,21 @@
+@import '../../sassStyles/mixins.scss';
 .accordion {
   display: flex;
   flex-wrap: nowrap;
 
   margin-top: 60px;
+
+  @include xlMaxBreakPoint {
+    flex-wrap: wrap;
+  }
 }
 
 .accordion__left {
   margin-right: 80px;
+
+  @include xlMaxBreakPoint {
+    margin-right: 0px;
+  }
 }
 
 .accordion__item {

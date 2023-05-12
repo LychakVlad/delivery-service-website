@@ -53,6 +53,7 @@ body {
   &--slider {
     max-width: 1324px;
     margin-left: 108px;
+    overflow-x: hidden;
   }
 }
 .leaflet-container {

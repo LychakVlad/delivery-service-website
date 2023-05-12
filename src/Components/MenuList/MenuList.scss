@@ -1,3 +1,5 @@
+@import '../../sassStyles//mixins.scss';
+
 .menu-list {
   margin-top: 56px;
   &__wrapper {
@@ -8,6 +10,15 @@
   &__img {
     max-width: 490px;
     max-height: 460px;
+
+    @include xxlMaxBreakPoint {
+      max-width: 400px;
+      max-height: 380px;
+    }
+
+    @include xlMaxBreakPoint {
+      display: none;
+    }
   }
   &__right {
     display: flex;

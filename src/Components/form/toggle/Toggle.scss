@@ -21,7 +21,7 @@
     color: #001a34;
     z-index: 1;
     user-select: none;
-    padding: 14px 10px;
+    padding: 14px 4px;
 
     &:last-child {
       padding-right: 20px;
@@ -30,9 +30,9 @@
 
   .toggle-ball {
     position: absolute;
-    top: 0;
+    bottom: -2px;
     left: 0;
-    width: 130px;
+    width: 50%;
     height: 48px;
     background-color: #fff;
     border-radius: 1000px;
