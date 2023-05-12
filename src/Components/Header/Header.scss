@@ -1,3 +1,5 @@
+@import '../../sassStyles/mixins.scss';
+
 .header {
   background-color: #005bff;
   color: white;
@@ -21,6 +23,10 @@
 
     padding: 8px 0px 4px;
 
+    @include xlMaxBreakPoint {
+      padding: 12px 0px 24px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -30,11 +36,21 @@
       left: -11.5%;
 
       border: 1px solid rgba(255, 255, 255, 0.1);
+
+      @include xlMaxBreakPoint {
+        display: none;
+      }
     }
   }
   &__top-left {
     display: flex;
     align-items: center;
+  }
+
+  &__top-menu {
+    @include xlMaxBreakPoint {
+      display: none;
+    }
   }
 
   &__top-menu-item {
@@ -52,6 +68,10 @@
 
   &__bottom {
     padding: 28px 0px 46px;
+
+    @include xlMaxBreakPoint {
+      display: none;
+    }
   }
 
   &__bottom-menu-item {

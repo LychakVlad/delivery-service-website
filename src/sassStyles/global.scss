@@ -8,6 +8,7 @@ body {
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 p,
@@ -20,8 +21,17 @@ h4 {
   padding: 0;
 }
 
+body {
+  min-width: 100vw;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .body {
   margin: 0;
+  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +42,7 @@ h4 {
 
 .container {
   padding: 0px 24px;
-  width: 100%;
+
   margin: 0 auto;
   max-width: 1200px;
 

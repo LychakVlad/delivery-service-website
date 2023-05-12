@@ -1,13 +1,16 @@
+@import '../../sassStyles/mixins.scss';
+
 .main-menu {
   border-radius: 40px;
   background-color: rgb(89, 89, 252);
   width: 100%;
-  overflow-x: hidden;
-  max-height: 360px;
+  height: 100%;
+  overflow: hidden;
+
   position: relative;
 
   h1 {
-    max-width: 460px;
+    max-width: 500px;
   }
 
   &__text {
@@ -25,6 +28,10 @@
     position: relative;
     z-index: 2;
     padding: 50px 60px;
+
+    @include xlMaxBreakPoint {
+      padding: 36px 24px 66px;
+    }
   }
 
   &__img {

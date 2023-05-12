@@ -8,16 +8,13 @@ const Header = () => {
       <div className="container">
         <div className="header__top">
           <div className="header__top-left">
-            <div className="logo">YOUR LOGO</div>
+            <div className="logo">ExDrop</div>
             <div className="header__top-menu">
               <a href="#1" className="header__top-menu-item">
                 For e-commerce
               </a>
               <a href="#1" className="header__top-menu-item">
                 For partners
-              </a>
-              <a href="#1" className="header__top-menu-item">
-                Track you order
               </a>
             </div>
           </div>

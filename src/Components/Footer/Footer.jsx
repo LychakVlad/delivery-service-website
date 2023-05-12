@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
           <div className="footer__bottom-block">
             <div className="footer__logo-block">
-              <div className="logo">YOUR LOGO</div>
+              <div className="logo">ExDrop</div>
               <p className="footer__logo-descriprion">Description</p>
             </div>
             <div className="footer__social">

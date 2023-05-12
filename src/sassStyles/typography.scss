@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './mixins.scss';
 
 h1 {
   font-style: normal;
@@ -10,6 +11,13 @@ h1 {
     &--white {
       color: white;
     }
+  }
+
+  @include xlMaxBreakPoint {
+    font-size: 32px;
+    line-height: 32px;
+
+    letter-spacing: 1.6px;
   }
 }
 
@@ -24,6 +32,12 @@ h2 {
       color: white;
     }
   }
+
+  @include xlMaxBreakPoint {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.8px;
+  }
 }
 
 h3 {
@@ -32,10 +46,18 @@ h3 {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.4px;
+
   &.title {
     &--white {
       color: white;
     }
+  }
+
+  @include xlMaxBreakPoint {
+    font-size: 18px;
+    line-height: 24px;
+
+    letter-spacing: 0.6px;
   }
 }
 
