@@ -1,7 +1,7 @@
 {
   "name": "delivery-service-website",
   "version": "0.1.0",
-  "homepage": "https://LychakVlad.github.io/delivery-service-website",
+  "homepage": "https://lovely-unicorn-cdb3f1.netlify.app/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.8",
@@ -16,13 +16,14 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-id-swiper": "^4.0.0",
     "react-input-mask": "^2.0.4",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.1",
     "sass": "^1.62.1",
-    "swiper": "^9.2.4",
+    "swiper": "^9.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -6,7 +6,7 @@ const BigSlide = () => {
   return (
     <div className="big-slide">
       <div className="big-slide__img-wrapper">
-        <img src={Photo} alt="photo" className="big-slide__img" />
+        <img src={Photo} alt="client" className="big-slide__img" />
       </div>
 
       <ThirdTitle title="Mike Polo" />

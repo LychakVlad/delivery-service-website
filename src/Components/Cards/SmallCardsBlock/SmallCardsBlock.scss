@@ -42,14 +42,23 @@
   min-height: 124px;
 
   &__img {
-    max-width: 276px;
-    max-height: 167px;
+    max-width: 256px;
+    max-height: 147px;
     position: absolute;
 
     bottom: 0;
     right: -26%;
 
     z-index: -1;
+
+    @include xxlMaxBreakPoint {
+      max-width: 206px;
+      max-height: 107px;
+    }
+
+    @include xlMaxBreakPoint {
+      right: -16%;
+    }
   }
 
   &__link {

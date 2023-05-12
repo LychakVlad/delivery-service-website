@@ -6,12 +6,6 @@ import { Pagination, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 const BigSlider = () => {
   return (
     <div className="big-slider">
@@ -20,12 +14,32 @@ const BigSlider = () => {
           <SecondTitle title="Satisfied customers" />
           <Swiper
             slidesPerView={3.5}
-            spaceBetween={'24'}
-            style={{ marginTop: '40px', overflow: 'visible' }}
+            spaceBetween={24}
+            style={{
+              marginTop: '40px',
+              overflow: 'visible',
+              paddingBottom: '56px',
+            }}
+            breakpoints={{
+              320: {
+                width: 480,
+                slidesPerView: 1,
+              },
+              768: {
+                width: 768,
+                slidesPerView: 2,
+              },
+              1024: {
+                width: 1024,
+                slidesPerView: 2,
+              },
+              // when window width is >= 768px
+              1200: {
+                width: 1200,
+                slidesPerView: 3,
+              },
+            }}
           >
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
             <SwiperSlide>
               <BigSlide />
             </SwiperSlide>

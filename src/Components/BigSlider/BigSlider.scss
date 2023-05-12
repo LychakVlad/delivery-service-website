@@ -1,3 +1,5 @@
+@import '../../sassStyles/mixins.scss';
+
 .big-slider {
   margin-top: 56px;
   position: relative;
@@ -7,11 +9,16 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
-    -webkit-box-shadow: inset -130px 15px 46px -69px rgb(255, 255, 255);
-    -moz-box-shadow: inset -130px 15px 46px -69px rgb(255, 255, 255);
-    box-shadow: inset -130px 15px 46px -69px rgb(255, 255, 255);
+    -webkit-box-shadow: inset -130px 15px 16px -69px rgb(255, 255, 255);
+    -moz-box-shadow: inset -130px 15px 16px -69px rgb(255, 255, 255);
+    box-shadow: inset -130px 15px 16px -69px rgb(255, 255, 255);
     top: 0;
     left: 0;
+    pointer-events: none;
+
+    @include lgMaxBreakPoint {
+      display: none;
+    }
   }
 
   .swiper-container {
@@ -27,6 +34,10 @@
   z-index: 1000;
 
   max-width: 432px;
+
+  @include lgMaxBreakPoint {
+    max-width: 280px;
+  }
 
   &__img-wrapper {
     width: 56px;

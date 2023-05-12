@@ -1,6 +1,5 @@
 import React from 'react';
 import Toggle from '../form/toggle/Toggle';
-import Input from '../form/Input/Input';
 import ThirdTitle from '../ui/titles/ThirdTitle';
 import CheckBox from '../form/checkbox/CheckBox';
 import AutocompleteInput from '../form/Input/AutocompleteInput';

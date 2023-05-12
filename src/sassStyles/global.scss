@@ -42,6 +42,7 @@ body {
 }
 .main {
   flex-grow: 1;
+  overflow-x: hidden;
 }
 
 .container {
@@ -49,12 +50,6 @@ body {
 
   margin: 0 auto;
   max-width: 1200px;
-
-  &--slider {
-    max-width: 1324px;
-    margin-left: 108px;
-    overflow-x: hidden;
-  }
 }
 .leaflet-container {
   height: 100vh;
