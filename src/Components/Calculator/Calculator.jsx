@@ -208,7 +208,6 @@ const Calculator = () => {
               description="New York"
               setCoords={setCoordsTo}
             />
-            <Button onClick={handleCalculate}>Calculate</Button>
           </div>
 
           <div className="calculator__size-block">
@@ -240,6 +239,9 @@ const Calculator = () => {
                 ))}
               </div>
             )}
+            <Button onClick={handleCalculate} style="button--w-272">
+              Calculate
+            </Button>
             {showTotal && (
               <TotalSection
                 Icon={Icon}

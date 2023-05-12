@@ -1,4 +1,5 @@
 @import '../../sassStyles/variables.scss';
+@import '../../sassStyles/mixins.scss';
 
 .calculator {
   &__wrapper {
@@ -6,13 +7,25 @@
     padding: 60px;
     border-radius: 40px;
     margin-top: 56px;
+
+    position: relative;
+    z-index: 2;
+
+    @include xlMaxBreakPoint {
+      padding: 24px;
+    }
   }
   &__destination {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 56px;
     gap: 20px;
     margin-top: 24px;
+
+    @include xlMaxBreakPoint {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
   }
   &__size-block {
     margin-top: 44px;
@@ -23,6 +36,16 @@
   &__sizes {
     display: flex;
     gap: 20px;
+    position: relative;
+
+    overflow-x: auto;
+    z-index: 3;
+
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    @include xlMaxBreakPoint {
+    }
   }
   &__size {
     background-color: white;
@@ -62,8 +85,7 @@
   &__size-icon {
     width: 32px;
   }
-  &__size-bottom {
-  }
+
   &__size-size {
     font-weight: 500;
     font-size: 20px;
@@ -81,6 +103,11 @@
     display: flex;
     gap: 12px;
     margin-bottom: 24px;
+
+    @include xlMaxBreakPoint {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__total {

@@ -3,6 +3,9 @@
 
 .top-menu {
   background-color: $BGBlue;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
 
   &__wrapper {
     display: flex;
