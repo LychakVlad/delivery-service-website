@@ -39,6 +39,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .main {
   flex-grow: 1;
@@ -50,6 +51,7 @@ body {
 
   margin: 0 auto;
   max-width: 1200px;
+  position: relative;
 }
 .leaflet-container {
   height: 100vh;

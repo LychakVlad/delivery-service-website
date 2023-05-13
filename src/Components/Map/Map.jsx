@@ -72,6 +72,19 @@ const Map = () => {
     <div className="map">
       <div className="container">
         <SecondTitle title="It's convenient to be close by" />
+        <MapMenu
+          postOffices={postOffices}
+          setPostOffices={setPostOffices}
+          selfPickup={selfPickup}
+          setSelfPickup={setSelfPickup}
+          byCardOnReceipt={byCardOnReceipt}
+          setByCardOnReceipt={setByCardOnReceipt}
+          byCashOnReceipt={byCashOnReceipt}
+          setByCashOnReceipt={setByCashOnReceipt}
+          setMainCoords={setMainCoords}
+          cityFind={cityFind}
+          setCityFind={setCityFind}
+        />
         <div className="map__wrapper">
           <MapContainer
             center={centralPosition}
@@ -102,19 +115,6 @@ const Map = () => {
             <SetViewOnClick centralPosition={centralPosition} />
           </MapContainer>
         </div>
-        <MapMenu
-          postOffices={postOffices}
-          setPostOffices={setPostOffices}
-          selfPickup={selfPickup}
-          setSelfPickup={setSelfPickup}
-          byCardOnReceipt={byCardOnReceipt}
-          setByCardOnReceipt={setByCardOnReceipt}
-          byCashOnReceipt={byCashOnReceipt}
-          setByCashOnReceipt={setByCashOnReceipt}
-          setMainCoords={setMainCoords}
-          cityFind={cityFind}
-          setCityFind={setCityFind}
-        />
       </div>
     </div>
   );
