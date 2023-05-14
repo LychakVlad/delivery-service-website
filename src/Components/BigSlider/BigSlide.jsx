@@ -15,9 +15,7 @@ const BigSlide = () => {
       <p className="big-slide__text">
         I would like to express my gratitude to the logistics company that has
         been providing excellent and punctual delivery services for our goods
-        across the country for the past six months. Working with them has
-        allowed me to forget about the usual concerns associated with the
-        delivery process.
+        across the country for the past six months.
       </p>
     </div>
   );

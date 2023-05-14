@@ -10,7 +10,7 @@
     margin: 32px 0px 0px;
     gap: 24px;
 
-    @include xlMaxBreakPoint {
+    @include xxlMaxBreakPoint {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -39,11 +39,11 @@
   z-index: 3;
 
   width: 100%;
-  min-height: 124px;
+  min-height: 144px;
 
   &__img {
-    max-width: 256px;
-    max-height: 147px;
+    max-width: 226px;
+    max-height: 127px;
     position: absolute;
 
     bottom: 0;
@@ -54,10 +54,15 @@
     @include xxlMaxBreakPoint {
       max-width: 206px;
       max-height: 107px;
+      right: -8%;
     }
 
     @include xlMaxBreakPoint {
-      right: -16%;
+      right: -20%;
+    }
+
+    @include lgMaxBreakPoint {
+      right: -10%;
     }
   }
 

@@ -13,6 +13,7 @@ const BigSlider = () => {
         <div className="big-slider__wrapper">
           <SecondTitle title="Satisfied customers" />
           <Swiper
+            touchStartPreventDefault={false}
             slidesPerView={3.5}
             spaceBetween={24}
             style={{

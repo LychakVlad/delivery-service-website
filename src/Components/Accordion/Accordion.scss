@@ -27,6 +27,10 @@
   flex-direction: column;
 
   margin-bottom: 10px;
+
+  @include xlMaxBreakPoint {
+    margin-bottom: 28px;
+  }
 }
 
 .accordion__header {

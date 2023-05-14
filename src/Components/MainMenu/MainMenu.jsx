@@ -11,6 +11,7 @@ const MainMenu = () => {
   return (
     <div className="main-menu">
       <Swiper
+        touchStartPreventDefault={false}
         slidesPerView={1}
         modules={[Pagination, A11y]}
         pagination={{
