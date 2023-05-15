@@ -32,7 +32,7 @@ const Rates = () => {
               <p className="rates__text--fw-thin">per container</p>
             </div>
             <div className="rates__alert">
-              <img src="" alt="" />
+              <img src="./." alt="alert" />
               <p className="rates__text--color-black">
                 At the moment, only the warehouses in New York and Washington,
                 DC are available.
@@ -44,7 +44,23 @@ const Rates = () => {
               <RatesRow content={item} />
             ))}
           </div>
-          <div className="rates__third-column"></div>
+          <div className="rates__third-column">
+            <p className="rates__text--fw-thin rates__text--color-black">
+              What is included in the rate:
+            </p>
+            <div className="rates__includes">
+              <img src="./." alt="icon" />
+              <p className="rates__text--color-black ">text</p>
+            </div>
+            <div className="rates__includes">
+              <img src="./." alt="icon" />
+              <p className="rates__text--color-black ">text</p>
+            </div>
+            <div className="rates__includes">
+              <img src="./." alt="icon" />
+              <p className="rates__text--color-black ">text</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
