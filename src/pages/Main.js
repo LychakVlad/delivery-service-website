@@ -11,6 +11,7 @@ import BigSlider from '../components/BigSlider/BigSlider';
 import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import Footer from '../components/Footer/Footer';
+import CardIcon from '../assets/small-illustration.svg';
 
 const pointsThree = [
   {
@@ -35,6 +36,25 @@ const pointsThree = [
   },
 ];
 
+const cards = [
+  {
+    title: 'My Account',
+    linkText: 'Read more',
+  },
+  {
+    title: 'My Account',
+    linkText: 'Read more',
+  },
+  {
+    title: 'My Account',
+    linkText: 'Read more',
+  },
+  {
+    title: 'My Account',
+    linkText: 'Read more',
+  },
+];
+
 const Main = () => {
   return (
     <div className="body">
@@ -45,7 +65,7 @@ const Main = () => {
         <Calculator />
         <Map />
         <LargeCardsBlock />
-        <SmallCardsBlock />
+        <SmallCardsBlock content={cards} img={CardIcon} position={true} />
         <MenuList points={pointsThree} />
         <BigSlider />
         <IconsSection />

@@ -1,8 +1,15 @@
 import React from 'react';
 import ThirdTitle from '../../ui/titles/ThirdTitle';
 
-const SmallCardsItem = ({ title, img, linkText, link }) => {
-  return (
+const SmallCardsItem = ({ title, img, linkText, link, position }) => {
+  return !position ? (
+    <div
+      className={`small-card-item ${!position ? 'small-card-item--upper' : ''}`}
+    >
+      <img src={img} alt="icon" className="small-card-item__img" />
+      <ThirdTitle title={title} />
+    </div>
+  ) : (
     <div className="small-card-item">
       <ThirdTitle title={title} />
       <a href={link} className="small-card-item__link">
