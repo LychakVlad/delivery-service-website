@@ -4,8 +4,9 @@ import SecondTitle from '../ui/titles/SecondTitle';
 import Input from '../form/Input/Input';
 import Button from '../ui/Button';
 import CheckBox from '../form/checkbox/CheckBox';
+import Illustration from '../../assets/big-illustration.svg';
 
-const CallBackForm = () => {
+const CallBackForm = ({ withImg }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const [inputValue, setInputValue] = useState({
@@ -55,57 +56,65 @@ const CallBackForm = () => {
   };
 
   return (
-    <div className="call-back">
-      <div className="call-back__wrapper">
-        <SecondTitle title="We're on our way" />
-        <form>
-          <div className="call-back__form">
-            <Input
-              type="text"
-              value={name}
-              onChange={handleChange}
-              name="name"
-              label="How do I address you?"
-              required
-              error={errors.name}
-            />
+    <div className={`call-back ${withImg ? 'call-back--with-img' : ''} `}>
+      <div className="container">
+        <div className="call-back__wrapper">
+          <div className="call-back__left">
+            {' '}
+            <SecondTitle title="We're on our way" />
+            <form>
+              <div className="call-back__form">
+                <Input
+                  type="text"
+                  value={name}
+                  onChange={handleChange}
+                  name="name"
+                  label="How do I address you?"
+                  required
+                  error={errors.name}
+                />
 
-            <Input
-              type="email"
-              value={email}
-              onChange={handleChange}
-              name="email"
-              label="E-mail"
-              required
-              error={errors.email}
-            />
+                <Input
+                  type="email"
+                  value={email}
+                  onChange={handleChange}
+                  name="email"
+                  label="E-mail"
+                  required
+                  error={errors.email}
+                />
 
-            <Input
-              type="tel"
-              value={tel}
-              onChange={handleChange}
-              name="tel"
-              label="Phone"
-            />
-            <Button onClick={handleSubmit}>Call me</Button>
-            <div>
-              <CheckBox
-                checked={isAgree1}
-                onChange={handleChange}
-                name="isAgree1"
-                label="I consent to the processing of personal data in accordance with the Terms of Personal Data Processing."
-                required={true}
-                error={errors.checkbox}
-              />
-              <CheckBox
-                checked={isAgree2}
-                onChange={handleChange}
-                name="isAgree2"
-                label="I consent to receive advertising and informational messages. "
-              />
-            </div>
+                <Input
+                  type="tel"
+                  value={tel}
+                  onChange={handleChange}
+                  name="tel"
+                  label="Phone"
+                />
+                <Button onClick={handleSubmit}>Call me</Button>
+                <div>
+                  <CheckBox
+                    checked={isAgree1}
+                    onChange={handleChange}
+                    name="isAgree1"
+                    label="I consent to the processing of personal data in accordance with the Terms of Personal Data Processing."
+                    required={true}
+                    error={errors.checkbox}
+                  />
+                  <CheckBox
+                    checked={isAgree2}
+                    onChange={handleChange}
+                    name="isAgree2"
+                    label="I consent to receive advertising and informational messages. "
+                  />
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+          <div className="call-back__right">
+            {withImg && <img src={Illustration} alt="big-illustration" />}
+          </div>
+        </div>
       </div>
     </div>
   );

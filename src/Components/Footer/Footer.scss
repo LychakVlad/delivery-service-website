@@ -8,6 +8,12 @@
 
   flex-shrink: 0;
   padding: 60px 0px 64px;
+  margin-top: 56px;
+
+  @include lgMaxBreakPoint {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
 }
 
 .footer {

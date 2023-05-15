@@ -4,26 +4,15 @@ import Illustration from '../../assets/big-illustration.svg';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Button from '../ui/Button';
 
-const MenuList = () => {
-  const points = [
-    {
-      number: 1,
-      text: 'Register and sign the offer online',
-    },
-    {
-      number: 2,
-      text: 'Create an order through a personal account, API or module',
-    },
-    {
-      number: 3,
-      text: 'Bring the parcel to the collection point or give it to the courier',
-    },
-  ];
-
+const MenuList = ({ withBG, points }) => {
   return (
     <div className="menu-list">
       <div className="container">
-        <div className="menu-list__wrapper">
+        <div
+          className={`menu-list__wrapper ${
+            withBG ? 'menu-list__wrapper--bg-gray' : ''
+          }`}
+        >
           <img
             src={Illustration}
             alt="illustration"

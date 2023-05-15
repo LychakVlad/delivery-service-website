@@ -1,22 +1,59 @@
-.call-back {
-  padding: 0px 24px;
-  width: 100%;
-  margin: 56px auto;
-  max-width: 936px;
+@import '../../sassStyles/mixins.scss';
 
-  background: #eff3f6;
-  border-radius: 40px;
+.call-back {
+  margin-top: 56px;
+
+  &__left {
+    max-width: 446px;
+  }
+
+  &__right {
+    img {
+      max-width: 464px;
+      max-height: 464px;
+    }
+
+    @include xxlMaxBreakPoint {
+      display: none;
+    }
+  }
+
+  &--with-img {
+    .call-back__wrapper {
+      max-width: none;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+
+      padding: 60px 50px 60px 100px;
+
+      @include xxlMaxBreakPoint {
+        padding: 60px 16px;
+      }
+
+      @include lgMaxBreakPoint {
+        padding: 24px 16px;
+      }
+    }
+  }
 }
 
 .call-back__wrapper {
-  padding: 60px 0;
+  background: #eff3f6;
+  border-radius: 40px;
+  padding: 60px 60px;
   display: flex;
-  flex-direction: column;
   margin: 0 auto;
-  max-width: 446px;
+  justify-content: center;
+
+  max-width: 936px;
 
   h2 {
     text-align: center;
+  }
+
+  @include lgMaxBreakPoint {
+    border-radius: 20px;
   }
 }
 

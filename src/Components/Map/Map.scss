@@ -68,6 +68,10 @@
     margin-top: 32px;
     position: relative;
     z-index: 2;
+
+    @include xlMaxBreakPoint {
+      max-height: 456px;
+    }
   }
 
   .cluster-icon {

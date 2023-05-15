@@ -6,6 +6,20 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 60px;
+
+    &--bg-gray {
+      background-color: #eff3f6;
+      border-radius: 40px;
+
+      @include xlMaxBreakPoint {
+        border-radius: 20px;
+      }
+    }
+
+    @include xlMaxBreakPoint {
+      padding: 16px;
+    }
   }
   &__img {
     max-width: 490px;

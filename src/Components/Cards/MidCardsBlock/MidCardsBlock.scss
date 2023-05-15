@@ -35,7 +35,8 @@
     background-color: $BGBlue;
 
     @include xlMaxBreakPoint {
-      height: 230px;
+      height: 200px;
+      border-radius: 0px 0px 20px 20px;
     }
   }
 }

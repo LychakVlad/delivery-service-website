@@ -5,7 +5,7 @@ import Button from '../../ui/Button';
 import MidCardItem from './MidCardItem';
 import CardIcon from '../../../assets/card-icon.svg';
 
-const MidCardsBlock = () => {
+const MidCardsBlock = ({ withButton }) => {
   const content = {
     first: {
       title: 'Convenience - many pickup and delivery locations',
@@ -37,9 +37,11 @@ const MidCardsBlock = () => {
               img={CardIcon}
             />
           </div>
-          <div className="mid-cards__btn">
-            <Button style={`button--w-272`}>Connect</Button>
-          </div>
+          {withButton && (
+            <div className="mid-cards__btn">
+              <Button style={`button--w-272`}>Connect</Button>
+            </div>
+          )}
         </div>
       </div>
       <div className="mid-cards__background"></div>
