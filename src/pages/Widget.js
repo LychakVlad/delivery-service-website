@@ -7,6 +7,7 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MenuList from '../components/MenuList/MenuList';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
+import slide1 from '../assets/slide1.jpg';
 
 const Widget = () => {
   const pointsFive = [
@@ -44,11 +45,39 @@ const Widget = () => {
       linkText: 'Read more',
     },
   ];
+
+  const headingSlides = [
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+  ];
+
   return (
     <div className="body">
       <Header />
       <div className="main">
-        <TopMenu />
+        <TopMenu content={headingSlides} />
         <MenuList
           withBG={true}
           points={pointsFive}

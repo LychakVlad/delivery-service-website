@@ -5,6 +5,8 @@ import Error from './pages/Error';
 import Widget from './pages/Widget';
 import API from './pages/API';
 import CMS from './pages/CMS';
+import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/widget" element={<Widget />} />
           <Route path="/api" element={<API />} />
           <Route path="/cms" element={<CMS />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

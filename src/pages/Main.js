@@ -12,6 +12,7 @@ import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import Footer from '../components/Footer/Footer';
 import CardIcon from '../assets/small-illustration.svg';
+import slide1 from '../assets/slide1.jpg';
 
 const Main = () => {
   const pointsThree = [
@@ -55,12 +56,55 @@ const Main = () => {
       linkText: 'Read more',
     },
   ];
+
+  const headingSlides = [
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+  ];
+
+  const midCardsContent = [
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+  ];
+
   return (
     <div className="body">
       <Header />
       <div className="main">
-        <TopMenu />
-        <MidCardsBlock />
+        <TopMenu content={headingSlides} />
+        <MidCardsBlock content={midCardsContent} />
         <Calculator />
         <Map />
         <LargeCardsBlock />

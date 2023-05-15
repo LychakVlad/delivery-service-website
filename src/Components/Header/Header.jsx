@@ -2,9 +2,9 @@ import React from 'react';
 import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
 import './Header.scss';
 
-const Header = () => {
+const Header = ({ rounded }) => {
   return (
-    <div className="header">
+    <div className={`header ${rounded ? 'header--rounded' : ''}`}>
       <div className="container">
         <div className="header__top">
           <div className="header__top-left">

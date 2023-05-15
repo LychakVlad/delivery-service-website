@@ -7,6 +7,16 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+
+  &--rounded {
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+
+    @include xlMaxBreakPoint {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
 }
 
 .logo {
@@ -33,7 +43,7 @@
       width: 1472px;
       height: 0px;
       bottom: 0;
-      left: -11.5%;
+      left: -14%;
 
       border: 1px solid rgba(255, 255, 255, 0.1);
 

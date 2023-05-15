@@ -4,7 +4,7 @@ import './Footer.scss';
 import Accordion from '../Accordion/Accordion';
 import SecondTitle from '../ui/titles/SecondTitle';
 
-const Footer = () => {
+const Footer = ({ withoutFaq }) => {
   const footerLinks = [
     'Country',
     'Contacts',
@@ -29,12 +29,18 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer__faq">
-          <SecondTitle title="FAQ" />
-          <Accordion content={accordionContent} />
-        </div>
+        {!withoutFaq && (
+          <div className="footer__faq">
+            <SecondTitle title="FAQ" />
+            <Accordion content={accordionContent} />
+          </div>
+        )}
         <div className="footer__bottom">
-          <div className="footer__list">
+          <div
+            className={`footer__list ${
+              withoutFaq ? 'footer__list--no-margin' : ''
+            }`}
+          >
             {footerLinks.map((item) => (
               <a href="#1" className="footer__list-item">
                 {item}

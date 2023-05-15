@@ -9,6 +9,7 @@ import MenuList from '../components/MenuList/MenuList';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
 import Rates from '../components/Rates/Rates';
+import slide1 from '../assets/slide1.jpg';
 
 const XDoc = () => {
   const pointsFive = [
@@ -52,12 +53,55 @@ const XDoc = () => {
       linkText: 'Read more',
     },
   ];
+
+  const headingSlides = [
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+    {
+      title: 'CMS Modules',
+      text: 'Start delivering orders with Ex Drop without additional development',
+      btn: 'Connect',
+      img: slide1,
+    },
+  ];
+
+  const midCardsContent = [
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+    {
+      title: 'Create and track orders',
+    },
+  ];
+
   return (
     <div className="body">
       <Header />
       <div className="main">
-        <TopMenu />
-        <MidCardsBlock withButton={false} />
+        <TopMenu content={headingSlides} />
+        <MidCardsBlock content={midCardsContent} withButton={false} />
         <MenuList withBG={true} points={pointsFive} />
         <Rates />
         <SmallCardsBlock content={cards} img={CardIcon} />
