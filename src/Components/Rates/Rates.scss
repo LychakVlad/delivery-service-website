@@ -1,7 +1,9 @@
+@import '../../sassStyles/mixins.scss';
+
 .rates {
   margin-top: 56px;
   &-wrapper {
-    background-color: #ff9900;
+    background: linear-gradient(98.38deg, #ff9900 -4.36%, #bb7000 103.53%);
     padding: 32px;
     border-radius: 27px;
     margin-top: 24px;
@@ -9,7 +11,17 @@
 
     display: flex;
     justify-content: space-between;
-    gap: 56px;
+    gap: 24px;
+    height: 100%;
+
+    @include xxlMaxBreakPoint {
+      flex-direction: column;
+      padding: 16px 12px;
+    }
+
+    @include lgMaxBreakPoint {
+      border-radius: 20px;
+    }
   }
   &__first-column {
     display: flex;
@@ -17,6 +29,16 @@
     justify-content: space-between;
   }
   &__second-column {
+    max-width: 396px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    @include xxlMaxBreakPoint {
+      max-width: none;
+    }
   }
   &__third-column {
     background: white;
@@ -24,9 +46,16 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    max-width: 346px;
+
+    @include xxlMaxBreakPoint {
+      max-width: none;
+    }
   }
   &__price-block {
+    @include xxlMaxBreakPoint {
+      margin-bottom: 24px;
+    }
   }
   &__price {
     font-weight: 900;
@@ -34,21 +63,40 @@
     line-height: 44px;
     letter-spacing: 1.6px;
   }
-  &__alert {
-    max-width: 300px;
+  &__info {
+    max-width: 288px;
     display: flex;
     background-color: white;
     padding: 16px;
     border-radius: 16px;
     align-items: center;
 
+    font-weight: 375;
+    font-size: 14px;
+
+    @include xxlMaxBreakPoint {
+      max-width: none;
+    }
+
     img {
       margin-right: 12px;
+      width: 44px;
+      height: 44px;
     }
   }
   &__includes {
     display: flex;
     align-items: center;
+    margin-top: 36px;
+
+    &:nth-child(2) {
+      margin-top: 24px;
+    }
+
+    img {
+      margin-right: 20px;
+      max-width: 42px;
+    }
   }
   &__text {
     font-style: normal;
@@ -75,6 +123,68 @@
 
     &:last-child {
       margin-bottom: 0px;
+    }
+
+    span {
+      display: block;
+      margin-top: 24px;
+    }
+  }
+
+  &-icons__wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(118.65deg, #005bff 13.87%, #2eb3ff 82.33%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 32px;
+
+    margin-top: 24px;
+
+    @include xlMaxBreakPoint {
+      flex-direction: column;
+    }
+  }
+  &-icons__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+
+    letter-spacing: 0.6px;
+    color: white;
+    margin-right: 36px;
+
+    @include xlMaxBreakPoint {
+      margin-top: 28px;
+      margin-right: 0px;
+    }
+  }
+  &-icons__icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    @include lgMaxBreakPoint {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+
+  &-icons__icon {
+    opacity: 0.7;
+    width: 100%;
+    @include xlMaxBreakPoint {
+      margin-top: 24px;
+    }
+
+    img {
+      width: 100%;
+
+      @include xlMaxBreakPoint {
+        max-width: 200px;
+        max-height: 100px;
+      }
     }
   }
 }

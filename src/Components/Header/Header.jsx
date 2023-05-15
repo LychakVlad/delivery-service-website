@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container">
         <div className="header__top">
           <div className="header__top-left">
-            <div className="logo">ExDrop</div>
+            <div className="logo">Ex Drop</div>
             <div className="header__top-menu">
               <a href="#1" className="header__top-menu-item">
                 For e-commerce
