@@ -1,13 +1,12 @@
 import React from 'react';
 import './MainMenu.scss';
-import slide1 from '../../assets/slide1.jpg';
 import MainMenuItem from './MainMenuItem';
 // import Swiper core and required modules
 import { Pagination, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const MainMenu = () => {
+const MainMenu = ({ content }) => {
   return (
     <div className="main-menu">
       <Swiper
@@ -22,37 +21,16 @@ const MainMenu = () => {
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
       >
-        <SwiperSlide>
-          <MainMenuItem
-            img={slide1}
-            title="Delivery service for online stores"
-            text="Develop your business, and we'll bring the orders"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {' '}
-          <MainMenuItem
-            img={slide1}
-            title="Delivery service for online stores"
-            text="Develop your business, and we'll bring the orders"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {' '}
-          <MainMenuItem
-            img={slide1}
-            title="Delivery service for online stores"
-            text="Develop your business, and we'll bring the orders"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          {' '}
-          <MainMenuItem
-            img={slide1}
-            title="Delivery service for online stores"
-            text="Develop your business, and we'll bring the orders"
-          />
-        </SwiperSlide>
+        {content.map((item) => (
+          <SwiperSlide>
+            <MainMenuItem
+              img={item.img}
+              title={item.title}
+              text={item.text}
+              btn={item.btn}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

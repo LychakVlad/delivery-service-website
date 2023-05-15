@@ -5,13 +5,7 @@ import Button from '../../ui/Button';
 import MidCardItem from './MidCardItem';
 import CardIcon from '../../../assets/card-icon.svg';
 
-const MidCardsBlock = ({ withButton }) => {
-  const content = {
-    first: {
-      title: 'Convenience - many pickup and delivery locations',
-      button: 'Check out',
-    },
-  };
+const MidCardsBlock = ({ content, withButton, link }) => {
   return (
     <div className="mid-cards">
       <div className="container">
@@ -21,25 +15,22 @@ const MidCardsBlock = ({ withButton }) => {
             className="title--white"
           />
           <div className="mid-cards__block">
-            <MidCardItem
-              title={content.first.title}
-              button={content.first.button}
-              img={CardIcon}
-            />
-            <MidCardItem
-              title={content.first.title}
-              button={content.first.button}
-              img={CardIcon}
-            />
-            <MidCardItem
-              title={content.first.title}
-              button={content.first.button}
-              img={CardIcon}
-            />
+            {content.map((item) => (
+              <MidCardItem
+                title={item.title}
+                button={item.button}
+                img={CardIcon}
+              />
+            ))}
           </div>
           {withButton && (
             <div className="mid-cards__btn">
               <Button style={`button--w-272`}>Connect</Button>
+            </div>
+          )}
+          {link && (
+            <div className="mid-cards__btn-link">
+              <a href="#">View documentation</a>
             </div>
           )}
         </div>

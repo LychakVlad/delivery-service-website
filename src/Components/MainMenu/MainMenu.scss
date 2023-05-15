@@ -8,7 +8,6 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-
   @include xlMaxBreakPoint {
     border-radius: 20px;
   }
@@ -29,9 +28,13 @@
   }
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     z-index: 1000;
     padding: 50px 60px;
+    min-height: 336px;
 
     @include xlMaxBreakPoint {
       padding: 36px 24px 66px;

@@ -4,7 +4,7 @@ import Illustration from '../../assets/big-illustration.svg';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Button from '../ui/Button';
 
-const MenuList = ({ withBG, points }) => {
+const MenuList = ({ withBG, points, title, rounded }) => {
   return (
     <div className="menu-list">
       <div className="container">
@@ -19,7 +19,7 @@ const MenuList = ({ withBG, points }) => {
             className="menu-list__img"
           />
           <div className="menu-list__right">
-            <SecondTitle title="Quick Start" />
+            <SecondTitle title={title} />
             {points.map((item) => (
               <div className="menu-list__point">
                 <div className="menu-list__number">{item.number}</div>
@@ -30,6 +30,7 @@ const MenuList = ({ withBG, points }) => {
           </div>
         </div>
       </div>
+      {rounded && <div className="menu-list__bg"></div>}
     </div>
   );
 };
