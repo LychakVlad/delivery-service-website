@@ -7,6 +7,7 @@ import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
 import slide1 from '../assets/slide1.jpg';
+import CMSBlock from '../components/CMSBlock/CMSBlock';
 
 const CMS = () => {
   const cards = [
@@ -77,6 +78,7 @@ const CMS = () => {
         <div className="main">
           <TopMenu content={headingSlides} />
           <MidCardsBlock content={content} withButton={true} link={false} />
+          <CMSBlock />
           <SmallCardsBlock content={cards} img={CardIcon} position={true} />
           <CallBackForm withImg={true} />
         </div>
