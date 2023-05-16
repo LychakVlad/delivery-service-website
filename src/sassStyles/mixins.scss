@@ -1,6 +1,5 @@
 @import './variables.scss';
 
-// Breakpoints
 @mixin smMaxBreakPoint {
   @media (max-width: #{$screen-sm}) {
     @content;

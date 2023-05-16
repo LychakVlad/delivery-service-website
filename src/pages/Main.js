@@ -41,22 +41,18 @@ const Main = () => {
     {
       title: 'My Account',
       linkText: 'Read more',
-      key: 1,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
-      key: 2,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
-      key: 3,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
-      key: 4,
     },
   ];
 
@@ -90,19 +86,15 @@ const Main = () => {
   const midCardsContent = [
     {
       title: 'Create and track orders',
-      key: 1,
     },
     {
       title: 'Create and track orders',
-      key: 2,
     },
     {
       title: 'Create and track orders',
-      key: 3,
     },
     {
       title: 'Create and track orders',
-      key: 4,
     },
   ];
 
@@ -114,7 +106,6 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
-      key: 1,
     },
     {
       title: 'Simple returns ',
@@ -123,7 +114,6 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
-      key: 2,
     },
     {
       title: 'Simple returns ',
@@ -132,7 +122,6 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
-      key: 3,
     },
     {
       title: 'Simple returns ',
@@ -141,7 +130,6 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
-      key: 4,
     },
   ];
 

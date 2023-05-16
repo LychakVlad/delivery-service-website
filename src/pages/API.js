@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import TopMenu from '../components/TopMenu/TopMenu';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';

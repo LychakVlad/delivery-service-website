@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import AboutBlock from '../components/AboutBlock/AboutBlock';
 import LargeCardsBlock from '../components/Cards/LargeCardsBlock/LargeCardsBlock';

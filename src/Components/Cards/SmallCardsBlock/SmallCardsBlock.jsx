@@ -10,14 +10,14 @@ const SmallCardsBlock = ({ content, img, position }) => {
         <div className="small-cards__wrapper">
           <SecondTitle title="Easy integration" />
           <div className="small-cards__block">
-            {content.map((item) => (
+            {content.map((item, index) => (
               <SmallCardsItem
                 title={item.title}
                 img={img}
                 linkText={item.linkText}
                 link="#"
                 position={position}
-                key={item.key}
+                key={index}
               />
             ))}
           </div>

@@ -29,15 +29,16 @@ const Header = () => {
             )}
           </div>
           <div className="header__top-right">
-            <a href="#1" className="call-icon">
+            <a href="#1" className="call-icon" aria-label="call icon">
               <CallIcon key={1} />
             </a>
           </div>
         </div>
         <div className="header__bottom">
           <div className="header-bottom-menu">
-            {links.map((item) => (
+            {links.map((item, index) => (
               <a
+                key={index}
                 href={`/${item.toLocaleLowerCase()}`}
                 className={`header__bottom-menu-item ${
                   location.pathname === `/${item.toLocaleLowerCase()}`

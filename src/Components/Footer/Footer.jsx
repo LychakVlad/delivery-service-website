@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
 import './Footer.scss';
 import Accordion from '../Accordion/Accordion';
 import SecondTitle from '../ui/titles/SecondTitle';
 import { useLocation } from 'react-router-dom';
 
-const Footer = ({ withoutFaq }) => {
+const Footer = () => {
+  const [withoutFaq, setWithoutFaq] = useState(false);
   let location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/about' || location.pathname === '/contact') {
+      setWithoutFaq(true);
+    }
+  }, [location.pathname]);
 
   const footerLinks = [
     'Country',
@@ -32,6 +39,7 @@ const Footer = ({ withoutFaq }) => {
       key: 3,
     },
   ];
+
   return (
     <footer className="footer">
       <div className="container">
@@ -65,13 +73,25 @@ const Footer = ({ withoutFaq }) => {
               <p className="footer__logo-descriprion">Description</p>
             </div>
             <div className="footer__social">
-              <a href="#1" className="footer__social-item">
+              <a
+                href="#1"
+                className="footer__social-item "
+                aria-label="github link"
+              >
                 <CallIcon />
               </a>
-              <a href="#1" className="footer__social-item">
+              <a
+                href="#2"
+                className="footer__social-item"
+                aria-label="gmail link"
+              >
                 <CallIcon />
               </a>
-              <a href="#1" className="footer__social-item">
+              <a
+                href="#3"
+                className="footer__social-item"
+                aria-label="telegram link"
+              >
                 <CallIcon />
               </a>
             </div>

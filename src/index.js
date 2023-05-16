@@ -4,7 +4,6 @@ import './sassStyles/typography.scss';
 import './sassStyles/global.scss';
 import App from './App';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

@@ -15,12 +15,12 @@ const MidCardsBlock = ({ content, withButton, link }) => {
             className="title--white"
           />
           <div className="mid-cards__block">
-            {content.map((item) => (
+            {content.map((item, index) => (
               <MidCardItem
                 title={item.title}
                 button={item.button}
                 img={CardIcon}
-                key={item.key}
+                key={index}
               />
             ))}
           </div>
@@ -31,7 +31,7 @@ const MidCardsBlock = ({ content, withButton, link }) => {
           )}
           {link && (
             <div className="mid-cards__btn-link">
-              <a href="#">View documentation</a>
+              <a href="#1">View documentation</a>
             </div>
           )}
         </div>

@@ -56,16 +56,16 @@ const Rates = () => {
             </div>
           </div>
           <div className="rates__second-column">
-            {rowContent.map((item) => (
-              <RatesRow content={item} />
+            {rowContent.map((item, index) => (
+              <RatesRow content={item} key={index} />
             ))}
           </div>
           <div className="rates__third-column">
             <p className="rates__text--fw-thin rates__text--color-black">
               What is included in the rate:
             </p>
-            {includeContent.map((item) => (
-              <div className="rates__includes">
+            {includeContent.map((item, index) => (
+              <div key={index} className="rates__includes">
                 <img src={Box} alt="icon" />
                 <p className="rates__text--color-black ">{item.text}</p>
               </div>

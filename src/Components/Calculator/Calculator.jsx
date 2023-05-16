@@ -239,7 +239,7 @@ const Calculator = () => {
                 ))}
               </div>
             )}
-            <Button onClick={handleCalculate} style="button--w-272">
+            <Button onClick={handleCalculate} style={`button--w-272`}>
               Calculate
             </Button>
             {showTotal && (

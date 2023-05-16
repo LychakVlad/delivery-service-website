@@ -10,7 +10,7 @@ const LargeCardsBlock = ({ content, title }) => {
         <div className="large-cards__wrapper">
           <SecondTitle title={title} />
           <div className="large-cards__block">
-            {content.map((item) => (
+            {content.map((item, index) => (
               <LargeCardsItem
                 title={item.title}
                 img={item.img}
@@ -19,7 +19,7 @@ const LargeCardsBlock = ({ content, title }) => {
                 text={item.text}
                 digit={item.digit}
                 shadow={item.shadow}
-                key={item.key}
+                key={index}
               />
             ))}
           </div>
