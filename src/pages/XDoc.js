@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import TopMenu from '../components/TopMenu/TopMenu';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import Map from '../components/Map/Map';
@@ -97,19 +95,15 @@ const XDoc = () => {
   ];
 
   return (
-    <div className="body">
-      <Header />
-      <div className="main">
-        <TopMenu content={headingSlides} />
-        <MidCardsBlock content={midCardsContent} withButton={false} />
-        <MenuList withBG={true} points={pointsFive} />
-        <Rates />
-        <SmallCardsBlock content={cards} img={CardIcon} />
-        <Map />
-        <CallBackForm withImg={true} />
-      </div>
-      <Footer />
-    </div>
+    <>
+      <TopMenu content={headingSlides} />
+      <MidCardsBlock content={midCardsContent} withButton={false} />
+      <MenuList withBG={true} points={pointsFive} />
+      <Rates />
+      <SmallCardsBlock content={cards} img={CardIcon} />
+      <Map />
+      <CallBackForm withImg={true} />
+    </>
   );
 };
 

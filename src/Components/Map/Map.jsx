@@ -101,7 +101,11 @@ const Map = () => {
               iconCreateFunction={createCustomClusterIcon}
             >
               {filteredMarkers.map((pickup) => (
-                <Marker position={pickup.location} icon={customIcon}>
+                <Marker
+                  key={Math.random()}
+                  position={pickup.location}
+                  icon={customIcon}
+                >
                   <Popup>
                     <h4>{pickup.name}</h4>
                     <h4>{pickup.type}</h4>

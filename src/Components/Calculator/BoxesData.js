@@ -7,6 +7,7 @@ const boxes = [
     size: '10x10x10',
     weight: '20',
     id: 1,
+    key: 1,
     valueSize: [10, 10, 10, 20],
   },
   {
@@ -15,6 +16,7 @@ const boxes = [
     size: '20x20x20',
     weight: '40',
     id: 2,
+    key: 2,
     valueSize: [20, 20, 20, 40],
   },
   {
@@ -23,6 +25,7 @@ const boxes = [
     size: '30x30x30',
     weight: '60',
     id: 3,
+    key: 3,
     valueSize: [30, 30, 30, 60],
   },
   {
@@ -31,6 +34,7 @@ const boxes = [
     size: '40x40x40',
     weight: '100',
     id: 4,
+    key: 4,
     valueSize: [40, 40, 40, 100],
   },
 ];

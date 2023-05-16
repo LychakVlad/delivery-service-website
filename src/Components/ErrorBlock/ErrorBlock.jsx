@@ -17,7 +17,7 @@ const ErrorBlock = () => {
             <p className="error__text">
               There is an error in the address or the page has been deleted.
             </p>
-            <a href="/xdoc" className="error__link">
+            <a href="/main" className="error__link">
               Home
             </a>
           </div>

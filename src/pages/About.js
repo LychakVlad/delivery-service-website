@@ -49,16 +49,10 @@ const About = () => {
   const cardsTitle = 'To develop your business we have';
   return (
     <>
-      <div className="body">
-        <Header rounded={true} />
-        <div className="main">
-          <AboutBlock />
-          <LargeCardsBlock content={content} title={cardsTitle} />
-          <SmallCardsBlock content={cards} img={CardIcon} position={false} />
-          <CallBackForm withImg={true} />
-        </div>
-        <Footer withoutFaq={true} />
-      </div>
+      <AboutBlock />
+      <LargeCardsBlock content={content} title={cardsTitle} />
+      <SmallCardsBlock content={cards} img={CardIcon} position={false} />
+      <CallBackForm withImg={true} />
     </>
   );
 };

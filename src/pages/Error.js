@@ -3,9 +3,9 @@ import ErrorBlock from '../components/ErrorBlock/ErrorBlock';
 
 const Error = () => {
   return (
-    <div>
+    <>
       <ErrorBlock />
-    </div>
+    </>
   );
 };
 

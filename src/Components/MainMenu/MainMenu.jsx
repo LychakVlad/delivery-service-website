@@ -18,11 +18,9 @@ const MainMenu = ({ content }) => {
           bulletClass: 'my-pagination-bullet',
           bulletActiveClass: 'my-pagination-bullet-active',
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
         {content.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={Math.random()}>
             <MainMenuItem
               img={item.img}
               title={item.title}

@@ -7,14 +7,8 @@ import ContactBlock from '../components/Contacts/ContactBlock';
 const Contact = () => {
   return (
     <>
-      <div className="body">
-        <Header rounded={true} />
-        <div className="main">
-          <ContactBlock />
-          <CallBackForm withImg={true} />
-        </div>
-        <Footer withoutFaq={true} />
-      </div>
+      <ContactBlock />
+      <CallBackForm withImg={true} />
     </>
   );
 };

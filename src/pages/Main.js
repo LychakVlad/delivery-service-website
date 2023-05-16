@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header/Header';
 import TopMenu from '../components/TopMenu/TopMenu';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import Calculator from '../components/Calculator/Calculator';
@@ -10,7 +9,6 @@ import MenuList from '../components/MenuList/MenuList';
 import BigSlider from '../components/BigSlider/BigSlider';
 import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
-import Footer from '../components/Footer/Footer';
 import CardIcon from '../assets/small-illustration.svg';
 import LargeCardIcon from '../assets/delivery-illustration.svg';
 import slide1 from '../assets/slide1.jpg';
@@ -43,18 +41,22 @@ const Main = () => {
     {
       title: 'My Account',
       linkText: 'Read more',
+      key: 1,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
+      key: 2,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
+      key: 3,
     },
     {
       title: 'My Account',
       linkText: 'Read more',
+      key: 4,
     },
   ];
 
@@ -88,15 +90,19 @@ const Main = () => {
   const midCardsContent = [
     {
       title: 'Create and track orders',
+      key: 1,
     },
     {
       title: 'Create and track orders',
+      key: 2,
     },
     {
       title: 'Create and track orders',
+      key: 3,
     },
     {
       title: 'Create and track orders',
+      key: 4,
     },
   ];
 
@@ -108,6 +114,7 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
+      key: 1,
     },
     {
       title: 'Simple returns ',
@@ -116,6 +123,7 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
+      key: 2,
     },
     {
       title: 'Simple returns ',
@@ -124,6 +132,7 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
+      key: 3,
     },
     {
       title: 'Simple returns ',
@@ -132,28 +141,25 @@ const Main = () => {
       digit: '50%',
       icon: LargeCardIcon,
       shadow: true,
+      key: 4,
     },
   ];
 
   const largeCardsTitle = 'More perks';
 
   return (
-    <div className="body">
-      <Header />
-      <div className="main">
-        <TopMenu content={headingSlides} />
-        <MidCardsBlock content={midCardsContent} />
-        <Calculator />
-        <Map />
-        <LargeCardsBlock content={content} title={largeCardsTitle} />
-        <SmallCardsBlock content={cards} img={CardIcon} position={true} />
-        <MenuList points={pointsThree} />
-        <BigSlider />
-        <IconsSection />
-        <CallBackForm />
-      </div>
-      <Footer />
-    </div>
+    <>
+      <TopMenu content={headingSlides} />
+      <MidCardsBlock content={midCardsContent} withButton={true} />
+      <Calculator />
+      <Map />
+      <LargeCardsBlock content={content} title={largeCardsTitle} />
+      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <MenuList points={pointsThree} />
+      <BigSlider />
+      <IconsSection />
+      <CallBackForm />
+    </>
   );
 };
 

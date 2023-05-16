@@ -72,16 +72,10 @@ const API = () => {
 
   return (
     <>
-      <div className="body">
-        <Header />
-        <div className="main">
-          <TopMenu content={headingSlides} />
-          <MidCardsBlock content={content} withButton={true} link={true} />
-          <SmallCardsBlock content={cards} img={CardIcon} position={true} />
-          <CallBackForm withImg={true} />
-        </div>
-        <Footer />
-      </div>
+      <TopMenu content={headingSlides} />
+      <MidCardsBlock content={content} withButton={true} link={true} />
+      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <CallBackForm withImg={true} />
     </>
   );
 };

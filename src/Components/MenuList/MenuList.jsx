@@ -21,7 +21,7 @@ const MenuList = ({ withBG, points, title, rounded }) => {
           <div className="menu-list__right">
             <SecondTitle title={title} />
             {points.map((item) => (
-              <div className="menu-list__point">
+              <div key={Math.random()} className="menu-list__point">
                 <div className="menu-list__number">{item.number}</div>
                 <div className="menu-list__text">{item.text}</div>
               </div>

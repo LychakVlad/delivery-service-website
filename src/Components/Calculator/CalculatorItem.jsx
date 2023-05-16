@@ -1,9 +1,8 @@
 import React from 'react';
 
-const CalculatorItem = ({ key, settings, active, onClick, calcItemError }) => {
+const CalculatorItem = ({ settings, active, onClick, calcItemError }) => {
   return (
     <div
-      id={key}
       className={`calculator__size ${active ? 'is-active' : ''} ${
         calcItemError ? 'is-error' : ''
       } `}

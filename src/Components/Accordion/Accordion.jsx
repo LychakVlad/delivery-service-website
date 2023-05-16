@@ -6,20 +6,14 @@ const Accordion = ({ content }) => {
   return (
     <div className="accordion">
       <div className="accordion__left">
-        <AccordionItem title={content.first.title} text={content.first.text} />
-        <AccordionItem
-          title={content.second.title}
-          text={content.second.text}
-        />
-        <AccordionItem title={content.third.title} text={content.third.text} />
+        {content.map((item) => (
+          <AccordionItem title={item.title} text={item.text} key={item.key} />
+        ))}
       </div>
       <div>
-        <AccordionItem title={content.first.title} text={content.first.text} />
-        <AccordionItem
-          title={content.second.title}
-          text={content.second.text}
-        />
-        <AccordionItem title={content.third.title} text={content.third.text} />
+        {content.map((item) => (
+          <AccordionItem title={item.title} text={item.text} key={item.key} />
+        ))}
       </div>
     </div>
   );

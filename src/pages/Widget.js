@@ -74,22 +74,18 @@ const Widget = () => {
   ];
 
   return (
-    <div className="body">
-      <Header />
-      <div className="main">
-        <TopMenu content={headingSlides} />
-        <MenuList
-          withBG={true}
-          points={pointsFive}
-          title={listTitle}
-          rounded={true}
-        />
-        <Map />
-        <SmallCardsBlock content={cards} img={CardIcon} />
-        <CallBackForm withImg={true} />
-      </div>
-      <Footer />
-    </div>
+    <>
+      <TopMenu content={headingSlides} />
+      <MenuList
+        withBG={true}
+        points={pointsFive}
+        title={listTitle}
+        rounded={true}
+      />
+      <Map />
+      <SmallCardsBlock content={cards} img={CardIcon} />
+      <CallBackForm withImg={true} />
+    </>
   );
 };
 

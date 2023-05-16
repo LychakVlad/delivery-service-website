@@ -230,7 +230,7 @@ const Calculator = () => {
               <div className="calculator__sizes">
                 {boxes.map((item) => (
                   <CalculatorItem
-                    key={item.id}
+                    key={item.key}
                     settings={item}
                     active={activeId === item.id}
                     onClick={() => handleItemClick(item.id)}

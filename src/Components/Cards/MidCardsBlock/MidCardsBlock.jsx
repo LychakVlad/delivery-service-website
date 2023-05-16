@@ -20,6 +20,7 @@ const MidCardsBlock = ({ content, withButton, link }) => {
                 title={item.title}
                 button={item.button}
                 img={CardIcon}
+                key={item.key}
               />
             ))}
           </div>

@@ -19,6 +19,7 @@ const LargeCardsBlock = ({ content, title }) => {
                 text={item.text}
                 digit={item.digit}
                 shadow={item.shadow}
+                key={item.key}
               />
             ))}
           </div>

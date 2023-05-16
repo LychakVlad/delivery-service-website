@@ -73,17 +73,11 @@ const CMS = () => {
 
   return (
     <>
-      <div className="body">
-        <Header />
-        <div className="main">
-          <TopMenu content={headingSlides} />
-          <MidCardsBlock content={content} withButton={true} link={false} />
-          <CMSBlock />
-          <SmallCardsBlock content={cards} img={CardIcon} position={true} />
-          <CallBackForm withImg={true} />
-        </div>
-        <Footer />
-      </div>
+      <TopMenu content={headingSlides} />
+      <MidCardsBlock content={content} withButton={true} link={false} />
+      <CMSBlock />
+      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <CallBackForm withImg={true} />
     </>
   );
 };

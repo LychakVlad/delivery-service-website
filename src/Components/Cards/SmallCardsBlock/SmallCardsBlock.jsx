@@ -17,6 +17,7 @@ const SmallCardsBlock = ({ content, img, position }) => {
                 linkText={item.linkText}
                 link="#"
                 position={position}
+                key={item.key}
               />
             ))}
           </div>
