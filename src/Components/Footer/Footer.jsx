@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
+import { ReactComponent as Github } from '../../assets/github.svg';
+import { ReactComponent as LinkedIn } from '../../assets/linkedin.svg';
+import { ReactComponent as Telegram } from '../../assets/tg.svg';
+import { ReactComponent as Gmail } from '../../assets/gmail.svg';
 import './Footer.scss';
 import Accordion from '../Accordion/Accordion';
 import SecondTitle from '../ui/titles/SecondTitle';
@@ -83,25 +86,38 @@ const Footer = () => {
             </div>
             <div className="footer__social">
               <a
-                href="#1"
+                href="https://github.com/LychakVlad"
                 className="footer__social-item "
+                target="_blank"
+                rel="noreferrer"
                 aria-label="github link"
               >
-                <CallIcon />
+                <Github />
               </a>
               <a
-                href="#2"
+                href="https://www.linkedin.com/in/vladislav-lychak/"
+                className="footer__social-item"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="linkedin link"
+              >
+                <LinkedIn />
+              </a>
+              <a
+                href="https://t.me/Relast1"
+                className="footer__social-item"
+                aria-label="telegram link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Telegram />
+              </a>
+              <a
+                href="mailto: lycakvladislav@gmail.com"
                 className="footer__social-item"
                 aria-label="gmail link"
               >
-                <CallIcon />
-              </a>
-              <a
-                href="#3"
-                className="footer__social-item"
-                aria-label="telegram link"
-              >
-                <CallIcon />
+                <Gmail />
               </a>
             </div>
           </div>

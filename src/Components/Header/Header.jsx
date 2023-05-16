@@ -19,20 +19,21 @@ const Header = () => {
     <header className={`header ${rounded ? 'header--rounded' : ''}`}>
       <div className="container">
         <div className="header__top">
-          <div className="header__top-left">
-            {location.pathname === '/main' ? (
-              <div className="logo">Ex Drop</div>
-            ) : (
-              <a href="/main" className="logo">
-                Ex Drop
-              </a>
-            )}
-          </div>
-          <div className="header__top-right">
-            <a href="#1" className="call-icon" aria-label="call icon">
-              <CallIcon key={1} />
+          {location.pathname === '/main' ? (
+            <div className="logo">Ex Drop</div>
+          ) : (
+            <a href="/main" className="logo">
+              Ex Drop
             </a>
-          </div>
+          )}
+
+          <a
+            href="tel:+1123-456-7890"
+            className="call-icon"
+            aria-label="call icon"
+          >
+            <CallIcon key={1} />
+          </a>
         </div>
         <div className="header__bottom">
           <nav className="header-bottom-menu">
