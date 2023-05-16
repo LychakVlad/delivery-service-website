@@ -26,7 +26,7 @@ const Footer = () => {
     },
     {
       text: 'Private policy',
-      link: '/private',
+      link: '/privacy',
     },
   ];
 

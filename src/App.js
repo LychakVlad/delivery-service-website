@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 
 import PageLayout from './pages/PageLayout';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/cms" element={<CMS />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>

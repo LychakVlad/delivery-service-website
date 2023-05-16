@@ -1,0 +1,17 @@
+.privacy {
+  h1 {
+    margin: 40px 0px 60px;
+  }
+  &__wrapper {
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    margin: 16px 0px 16px;
+
+    max-width: 70%;
+  }
+}
