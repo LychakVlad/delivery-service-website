@@ -12,6 +12,7 @@ import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import Footer from '../components/Footer/Footer';
 import CardIcon from '../assets/small-illustration.svg';
+import LargeCardIcon from '../assets/delivery-illustration.svg';
 import slide1 from '../assets/slide1.jpg';
 
 const Main = () => {
@@ -99,6 +100,43 @@ const Main = () => {
     },
   ];
 
+  const content = [
+    {
+      title: 'Simple returns ',
+      text: 'We will return the order if the customer does not pick up the parcel ',
+      description: 'of the cost of direct delivery',
+      digit: '50%',
+      icon: LargeCardIcon,
+      shadow: true,
+    },
+    {
+      title: 'Simple returns ',
+      text: 'We will return the order if the customer does not pick up the parcel ',
+      description: 'of the cost of direct delivery',
+      digit: '50%',
+      icon: LargeCardIcon,
+      shadow: true,
+    },
+    {
+      title: 'Simple returns ',
+      text: 'We will return the order if the customer does not pick up the parcel ',
+      description: 'of the cost of direct delivery',
+      digit: '50%',
+      icon: LargeCardIcon,
+      shadow: true,
+    },
+    {
+      title: 'Simple returns ',
+      text: 'We will return the order if the customer does not pick up the parcel ',
+      description: 'of the cost of direct delivery',
+      digit: '50%',
+      icon: LargeCardIcon,
+      shadow: true,
+    },
+  ];
+
+  const largeCardsTitle = 'More perks';
+
   return (
     <div className="body">
       <Header />
@@ -107,7 +145,7 @@ const Main = () => {
         <MidCardsBlock content={midCardsContent} />
         <Calculator />
         <Map />
-        <LargeCardsBlock />
+        <LargeCardsBlock content={content} title={largeCardsTitle} />
         <SmallCardsBlock content={cards} img={CardIcon} position={true} />
         <MenuList points={pointsThree} />
         <BigSlider />

@@ -1,7 +1,12 @@
 import React from 'react';
+import ErrorBlock from '../components/ErrorBlock/ErrorBlock';
 
 const Error = () => {
-  return <div>404 NOT FOUND</div>;
+  return (
+    <div>
+      <ErrorBlock />
+    </div>
+  );
 };
 
 export default Error;

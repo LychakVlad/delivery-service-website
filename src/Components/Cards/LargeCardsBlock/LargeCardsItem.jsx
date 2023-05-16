@@ -19,7 +19,7 @@ const LargeCardsItem = ({
       {description && (
         <div className="large-card-item__text">{description}</div>
       )}
-      {icon && <img src={img} alt="icon" className="large-card-item__icon" />}
+      {icon && <img src={icon} alt="icon" className="large-card-item__icon" />}
       {img && <img src={img} alt="icon-img" className="large-card-item__img" />}
       {shadow ? (
         <div className="shadow"></div>

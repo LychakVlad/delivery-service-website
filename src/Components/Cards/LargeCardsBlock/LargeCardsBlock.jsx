@@ -15,6 +15,10 @@ const LargeCardsBlock = ({ content, title }) => {
                 title={item.title}
                 img={item.img}
                 description={item.description}
+                icon={item.icon}
+                text={item.text}
+                digit={item.digit}
+                shadow={item.shadow}
               />
             ))}
           </div>
