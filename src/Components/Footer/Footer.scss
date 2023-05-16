@@ -72,5 +72,9 @@
     color: #5a6c7d;
 
     opacity: 0.5;
+
+    &:nth-child(2) {
+      margin-bottom: 8px;
+    }
   }
 }

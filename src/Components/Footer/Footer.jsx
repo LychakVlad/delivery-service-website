@@ -16,10 +16,18 @@ const Footer = () => {
   }, [location.pathname]);
 
   const footerLinks = [
-    'Country',
-    'Contacts',
-    'About company',
-    'Private policy',
+    {
+      text: 'About company',
+      link: '/about',
+    },
+    {
+      text: 'Contacts',
+      link: '/contact',
+    },
+    {
+      text: 'Private policy',
+      link: '/private',
+    },
   ];
 
   const accordionContent = [
@@ -56,8 +64,8 @@ const Footer = () => {
             }`}
           >
             {footerLinks.map((item, index) => (
-              <a key={index} href="#1" className="footer__list-item">
-                {item}
+              <a key={index} href={item.link} className="footer__list-item">
+                {item.text}
               </a>
             ))}
           </div>
@@ -70,7 +78,8 @@ const Footer = () => {
                   Ex Drop
                 </a>
               )}
-              <p className="footer__logo-descriprion">Description</p>
+              <p className="footer__logo-descriprion">Ex Drop LLC.</p>
+              <p className="footer__logo-descriprion">All rights reserved</p>
             </div>
             <div className="footer__social">
               <a

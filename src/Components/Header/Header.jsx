@@ -16,7 +16,7 @@ const Header = () => {
   const links = ['Main', 'XDoc', 'Widget', 'CMS', 'API', 'About', 'Contact'];
 
   return (
-    <div className={`header ${rounded ? 'header--rounded' : ''}`}>
+    <header className={`header ${rounded ? 'header--rounded' : ''}`}>
       <div className="container">
         <div className="header__top">
           <div className="header__top-left">
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
         </div>
         <div className="header__bottom">
-          <div className="header-bottom-menu">
+          <nav className="header-bottom-menu">
             {links.map((item, index) => (
               <a
                 key={index}
@@ -49,10 +49,10 @@ const Header = () => {
                 {item}
               </a>
             ))}
-          </div>
+          </nav>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
