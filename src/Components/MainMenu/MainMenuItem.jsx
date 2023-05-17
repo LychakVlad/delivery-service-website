@@ -10,7 +10,9 @@ const MainMenuItem = ({ img, title, text, btn }) => {
       <div className="main-menu__wrapper">
         <FirstTitle title={title} className="title--white" />
         <p className="main-menu__text">{text}</p>
-        <Button style={`button--white button--w-111`}>{btn}</Button>
+        <Button style={`button--white button--w-111`} link="call-back">
+          {btn}
+        </Button>
       </div>
       <img src={img} alt="slide-img" className="main-menu__img" />
     </div>

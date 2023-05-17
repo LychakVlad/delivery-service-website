@@ -56,7 +56,10 @@ const CallBackForm = ({ withImg }) => {
   };
 
   return (
-    <div className={`call-back ${withImg ? 'call-back--with-img' : ''} `}>
+    <div
+      className={`call-back ${withImg ? 'call-back--with-img' : ''} `}
+      id="call-back"
+    >
       <div className="container">
         <div className="call-back__wrapper">
           <div className="call-back__left">

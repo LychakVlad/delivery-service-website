@@ -26,7 +26,9 @@ const MenuList = ({ withBG, points, title, rounded }) => {
                 <div className="menu-list__text">{item.text}</div>
               </div>
             ))}
-            <Button style={`button--w-272`}>Connect</Button>
+            <Button style={`button--w-272`} link="call-back">
+              Connect
+            </Button>
           </div>
         </div>
       </div>

@@ -26,12 +26,21 @@ const MidCardsBlock = ({ content, withButton, link }) => {
           </div>
           {withButton && (
             <div className="mid-cards__btn">
-              <Button style={`button--w-272`}>Connect</Button>
+              <Button style={`button--w-272`} link="call-back">
+                Connect
+              </Button>
             </div>
           )}
           {link && (
             <div className="mid-cards__btn-link">
-              <a href="#1">View documentation</a>
+              <a
+                href="https://web.postman.co/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="api link"
+              >
+                View documentation
+              </a>
             </div>
           )}
         </div>
