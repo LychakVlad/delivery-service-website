@@ -20,6 +20,10 @@
 
     z-index: 3;
 
+    &__desc {
+      margin-top: 12px;
+    }
+
     @include xlMaxBreakPoint {
       position: relative;
       top: 0;

@@ -17,7 +17,7 @@ const MapMenu = ({
   cityFind,
   setCityFind,
 }) => {
-  const [activeTab, setActiveTab] = useState('details');
+  const [activeTab, setActiveTab] = useState('pickup');
   const toggleHandle = () => {
     setActiveTab(activeTab === 'details' ? 'pickup' : 'details');
   };
@@ -35,15 +35,17 @@ const MapMenu = ({
       />
       <Toggle
         clickHandle={toggleHandle}
-        firstTitle="Details"
-        secondTitle="Pick up"
+        firstTitle="Pick up"
+        secondTitle="Details"
       />
       {activeTab === 'details' && (
         <div>
-          <ThirdTitle title="This is tittle" />
-          <p>
-            And this is text, a lot of text, a lot of text, a lot of text, a lot
-            of text, a lot of text, a lot of text, a lot of text, a lot of text
+          <ThirdTitle title="Find pickup point" />
+          <p className="map-menu__desc">
+            Here, you can explore pickup points and filter them based on your
+            preferences. Use the search bar or checkboxes to navigate, then
+            refine your search with filters including pickup type, payment
+            method, and location.
           </p>
         </div>
       )}
