@@ -5,17 +5,24 @@
   padding: 12px;
   list-style: none;
   border-radius: 14px;
-  top: 130%;
+  top: 100%;
   left: -10%;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 
   &.show {
     opacity: 100;
+    pointer-events: all;
   }
 
   &-item {
     transition: opacity 0.3s ease;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
     a {
       text-decoration: none;
       color: black;
