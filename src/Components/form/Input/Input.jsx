@@ -46,6 +46,7 @@ const Input = ({
           type={type}
           value={value}
           name={name}
+          id={name}
           className={`form-control ${isFilled ? 'filled' : ''} ${
             error ? 'error' : ''
           }`}
