@@ -82,9 +82,24 @@
     }
   }
 
-  &__bottom-menu-item {
-    margin-right: 36px;
+  &__nav-menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    height: 100%;
+  }
 
+  &__nav-point {
+    margin-right: 36px;
+    position: relative;
+    height: 100%;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__bottom-menu-item {
     color: white;
     text-decoration: none;
     position: relative;
@@ -93,10 +108,6 @@
 
     &:hover {
       opacity: 0.7;
-    }
-
-    &:last-child {
-      margin-right: 0px;
     }
 
     &.is-active {

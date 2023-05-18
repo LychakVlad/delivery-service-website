@@ -1,0 +1,27 @@
+.dropdown {
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  padding: 12px;
+  list-style: none;
+  border-radius: 14px;
+  top: 130%;
+  left: -10%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 100;
+  }
+
+  &-item {
+    transition: opacity 0.3s ease;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
