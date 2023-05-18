@@ -39,13 +39,24 @@ const TrackDelivery = () => {
           onChange={handleChange}
           error={error}
           maxLength={10}
+          test="delivery-input"
+          testError="delivery-error"
         />
-        <Button style={`button--white button--w-full`} onClick={handleSubmit}>
+        <Button
+          style={`button--white button--w-full`}
+          onClick={handleSubmit}
+          test="delivery-btn"
+        >
           Track
         </Button>
       </div>
       {modalOpen ? (
-        <Modal onClick={setModalOpen} delivery={true} value={trackNumber} />
+        <Modal
+          onClick={setModalOpen}
+          delivery={true}
+          value={trackNumber}
+          test="delivery-modal"
+        />
       ) : (
         ''
       )}

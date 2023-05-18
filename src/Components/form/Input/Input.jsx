@@ -14,6 +14,8 @@ const Input = ({
   className,
   description,
   maxLength,
+  test,
+  testError,
 }) => {
   const [isFilled, setIsFilled] = useState(false);
 
@@ -54,6 +56,7 @@ const Input = ({
           onChange={handleInputChange}
           required={required}
           maxLength={maxLength}
+          data-testid={test ? test : undefined}
         />
 
         {label && <label htmlFor={name}>{label}</label>}
@@ -69,7 +72,14 @@ const Input = ({
       name === 'length' ||
       name === 'weight'
         ? ''
-        : error && <div className="error-message">{error}</div>}
+        : error && (
+            <div
+              className="error-message"
+              data-testid={testError ? testError : undefined}
+            >
+              {error}
+            </div>
+          )}
     </div>
   );
 };

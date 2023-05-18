@@ -3,17 +3,18 @@
 .big-slider {
   margin-top: 56px;
   position: relative;
+  overflow: hidden;
 
   .shadow {
     position: absolute;
-    width: 100%;
+    width: calc(100% + 130px);
     height: 100%;
     z-index: 1000;
     -webkit-box-shadow: inset -130px 15px 26px -69px rgb(255, 255, 255);
     -moz-box-shadow: inset -130px 15px 26px -69px rgb(255, 255, 255);
     box-shadow: inset -130px 15px 26px -69px rgb(255, 255, 255);
     top: 0;
-    left: 10%;
+    right: -130px;
     pointer-events: none;
 
     @include lgMaxBreakPoint {

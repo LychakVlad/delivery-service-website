@@ -5,7 +5,7 @@ import { ReactComponent as Close } from '../../../assets/close-icon.svg';
 import SecondTitle from '../titles/SecondTitle';
 import Button from '../Button';
 
-const Modal = ({ onClick, delivery, value }) => {
+const Modal = ({ onClick, delivery, value, test }) => {
   const handleClick = () => {
     onClick(false);
   };
@@ -29,7 +29,7 @@ const Modal = ({ onClick, delivery, value }) => {
         </div>
       )}
       {delivery && (
-        <div className="modal">
+        <div className="modal" data-testid={test ? test : undefined}>
           <div className="modal__wrapper">
             <Sucsess />
             <div className="modal__content">

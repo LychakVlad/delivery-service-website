@@ -7,15 +7,12 @@
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.3",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "leaflet": "^1.9.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-id-swiper": "^4.0.0",
-    "react-input-mask": "^2.0.4",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
     "react-router-dom": "^6.11.1",
@@ -36,8 +33,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -53,13 +49,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.21.5",
-    "@babel/preset-react": "^7.18.6",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "babel-jest": "^29.5.0",
     "file-loader": "^6.2.0",
-    "gh-pages": "^5.0.0",
-    "jest": "^27.5.1"
+    "gh-pages": "^5.0.0"
   }
 }

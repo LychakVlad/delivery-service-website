@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.scss';
 import { Link } from 'react-scroll';
 
-const Button = ({ children, style, onClick, link }) => {
+const Button = ({ children, style, onClick, link, test }) => {
   return (
     <>
       {link && (
@@ -18,7 +18,11 @@ const Button = ({ children, style, onClick, link }) => {
         </Link>
       )}
       {!link && (
-        <button className={`button ${style}`} onClick={onClick}>
+        <button
+          data-testid={test ? test : undefined}
+          className={`button ${style}`}
+          onClick={onClick}
+        >
           <div>{children}</div>
         </button>
       )}
