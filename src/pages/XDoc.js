@@ -54,31 +54,30 @@ const XDoc = () => {
 
   const headingSlides = [
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Delivery for online stores',
+      text: "Develop your business, and we'll bring the orders",
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Delivery for online stores',
+      text: "Develop your business, and we'll bring the orders",
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Delivery for online stores',
+      text: "Develop your business, and we'll bring the orders",
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Delivery for online stores',
+      text: "Develop your business, and we'll bring the orders",
       btn: 'Connect',
       img: slide1,
     },
   ];
-
   const midCardsContent = [
     {
       title: 'Create and track orders',
@@ -96,7 +95,7 @@ const XDoc = () => {
 
   return (
     <>
-      <TopMenu content={headingSlides} />
+      <TopMenu content={headingSlides} withDelivery={true} />
       <MidCardsBlock content={midCardsContent} withButton={false} />
       <MenuList withBG={true} points={pointsFive} />
       <Rates />

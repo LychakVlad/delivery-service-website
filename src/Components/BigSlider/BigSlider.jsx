@@ -2,7 +2,6 @@ import React from 'react';
 import './BigSlider.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
 import BigSlide from './BigSlide';
-import { Pagination, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

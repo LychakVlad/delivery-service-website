@@ -8,7 +8,7 @@ const MidCardItem = ({ title, button, img }) => {
       <ThirdTitle title={title} />
       {button && (
         <div className="mid-card-item__link">
-          <a href="#">{button}</a>
+          <a href="#1">{button}</a>
         </div>
       )}
       <img src={img} alt="icon" className="mid-card-item__img" />

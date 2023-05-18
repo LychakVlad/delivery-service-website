@@ -13,6 +13,7 @@ const Input = ({
   error,
   className,
   description,
+  maxLength,
 }) => {
   const [isFilled, setIsFilled] = useState(false);
 
@@ -51,6 +52,7 @@ const Input = ({
           placeholder={placeholder}
           onChange={handleInputChange}
           required={required}
+          maxLength={maxLength}
         />
 
         {label && <label htmlFor={name}>{label}</label>}

@@ -5,6 +5,8 @@ import Input from '../form/Input/Input';
 import Button from '../ui/Button';
 import CheckBox from '../form/checkbox/CheckBox';
 import Illustration from '../../assets/big-illustration.svg';
+import Modal from '../ui/modal/Modal';
+import { useDisableBodyScroll } from '../../hooks/useDisableBodyScroll';
 
 const CallBackForm = ({ withImg }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -54,6 +56,8 @@ const CallBackForm = ({ withImg }) => {
       });
     }
   };
+
+  useDisableBodyScroll(submitted);
 
   return (
     <div
@@ -119,6 +123,7 @@ const CallBackForm = ({ withImg }) => {
           </div>
         </div>
       </div>
+      {submitted ? <Modal onClick={setSubmitted} /> : ''}
     </div>
   );
 };

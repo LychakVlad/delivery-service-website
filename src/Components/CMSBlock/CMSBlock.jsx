@@ -14,7 +14,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
           <div className="cms-block__item">
@@ -22,7 +22,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
           <div className="cms-block__item">
@@ -30,7 +30,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
           <div className="cms-block__item">
@@ -38,7 +38,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
           <div className="cms-block__item">
@@ -46,7 +46,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
           <div className="cms-block__item">
@@ -54,7 +54,7 @@ const CMSBlock = () => {
               <img src={Shopify} alt="shopify" className="cms-block__img" />
             </div>
             <div className="cms-block__link">
-              <a href="#">Install</a>
+              <a href="#1">Install</a>
             </div>
           </div>
         </div>
