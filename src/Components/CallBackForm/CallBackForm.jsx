@@ -76,9 +76,11 @@ const CallBackForm = ({ withImg }) => {
                   value={name}
                   onChange={handleChange}
                   name="name"
-                  label="How do I address you?"
+                  label="How do I adress you?"
                   required
                   error={errors.name}
+                  test="call-name-input"
+                  testError="call-error-name-input"
                 />
 
                 <Input
@@ -89,6 +91,8 @@ const CallBackForm = ({ withImg }) => {
                   label="E-mail"
                   required
                   error={errors.email}
+                  test="call-email-input"
+                  testError="call-error-email-input"
                 />
 
                 <Input
@@ -98,7 +102,9 @@ const CallBackForm = ({ withImg }) => {
                   name="tel"
                   label="Phone"
                 />
-                <Button onClick={handleSubmit}>Call me</Button>
+                <Button onClick={handleSubmit} test="call-btn">
+                  Call me
+                </Button>
                 <div>
                   <CheckBox
                     checked={isAgree1}
@@ -107,6 +113,8 @@ const CallBackForm = ({ withImg }) => {
                     label="I consent to the processing of personal data in accordance with the Terms of Personal Data Processing."
                     required={true}
                     error={errors.checkbox}
+                    test="call-checkbox"
+                    testError="call-error-checkbox"
                   />
                   <CheckBox
                     checked={isAgree2}
@@ -123,7 +131,7 @@ const CallBackForm = ({ withImg }) => {
           </div>
         </div>
       </div>
-      {submitted ? <Modal onClick={setSubmitted} /> : ''}
+      {submitted ? <Modal onClick={setSubmitted} test="call-modal" /> : ''}
     </div>
   );
 };

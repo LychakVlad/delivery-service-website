@@ -13,7 +13,7 @@ const Modal = ({ onClick, delivery, value, test }) => {
   return (
     <>
       {!delivery && (
-        <div className="modal">
+        <div className="modal" data-testid={test ? test : undefined}>
           <div className="modal__wrapper">
             <Sucsess />
             <div className="modal__content">

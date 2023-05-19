@@ -9,6 +9,8 @@ const CheckBox = ({
   required,
   error,
   description,
+  test,
+  testError,
 }) => {
   return (
     <div className="checkbox-container">
@@ -20,6 +22,7 @@ const CheckBox = ({
           checked={checked}
           onChange={onChange}
           required={required}
+          data-testid={test ? test : undefined}
         />
 
         <div className="checkbox__label"> {label}</div>
@@ -27,7 +30,14 @@ const CheckBox = ({
       {description && (
         <div className="description__checkbox-form">{description}</div>
       )}
-      {error && <div className="error-message__checkbox-form">{error}</div>}
+      {error && (
+        <div
+          className="error-message__checkbox-form"
+          data-testid={testError ? testError : undefined}
+        >
+          {error}
+        </div>
+      )}
     </div>
   );
 };
