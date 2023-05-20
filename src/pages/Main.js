@@ -10,7 +10,7 @@ import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
 import CardIcon from '../assets/small-illustration.svg';
 import LargeCardIcon from '../assets/delivery-illustration.svg';
-import slide1 from '../assets/slide1.jpg';
+import slide1 from '../assets/slide1.jpeg';
 const Map = React.lazy(() => import('../components/Map/Map'));
 
 const Main = () => {

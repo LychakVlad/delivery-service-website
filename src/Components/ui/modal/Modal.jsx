@@ -1,9 +1,10 @@
 import React from 'react';
 import './Modal.scss';
-import { ReactComponent as Sucsess } from '../../../assets/sucsess.svg';
 import { ReactComponent as Close } from '../../../assets/close-icon.svg';
 import SecondTitle from '../titles/SecondTitle';
 import Button from '../Button';
+
+const Sucsess = React.lazy(() => import('../../../assets/sucsess.svg'));
 
 const Modal = ({ onClick, delivery, value, test }) => {
   const handleClick = () => {

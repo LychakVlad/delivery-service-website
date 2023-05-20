@@ -1,7 +1,7 @@
 import React from 'react';
 import './Error.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
-import Illustration from '../../assets/error-ill.svg';
+const Illustration = React.lazy(() => import('../../assets/error-ill.svg'));
 
 const ErrorBlock = () => {
   return (
