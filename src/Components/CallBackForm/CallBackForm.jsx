@@ -37,29 +37,33 @@ const CallBackForm = React.memo(({ withImg }) => {
     }));
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const nameError =
-      name.length < 2 ? 'Name should be at least 2 characters long' : '';
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    const emailError = !emailRegex.test(email) ? 'Invalid email address' : '';
-    const checkboxError = isAgree1 ? '' : 'You must agree to the terms';
-    setErrors({ name: nameError, email: emailError, checkbox: checkboxError });
-    if (!nameError && !emailError && !checkboxError) {
-      setSubmitted(true);
-      setInputValue({
-        name: '',
-        tel: '',
-        email: '',
-        isAgree1: false,
-        isAgree2: false,
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
+      const nameError =
+        name.length < 2 ? 'Name should be at least 2 characters long' : '';
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      const emailError = !emailRegex.test(email) ? 'Invalid email address' : '';
+      const checkboxError = isAgree1 ? '' : 'You must agree to the terms';
+      setErrors({
+        name: nameError,
+        email: emailError,
+        checkbox: checkboxError,
       });
-    }
-  };
 
-  const handleButtonClick = useCallback((event) => {
-    handleSubmit(event);
-  }, []);
+      if (!nameError && !emailError && !checkboxError) {
+        setSubmitted(true);
+        setInputValue({
+          name: '',
+          tel: '',
+          email: '',
+          isAgree1: false,
+          isAgree2: false,
+        });
+      }
+    },
+    [email, name.length, isAgree1]
+  );
 
   useDisableBodyScroll(submitted);
 
@@ -106,7 +110,7 @@ const CallBackForm = React.memo(({ withImg }) => {
                   name="tel"
                   label="Phone"
                 />
-                <Button onClick={handleButtonClick} test="call-btn">
+                <Button onClick={handleSubmit} test="call-btn">
                   Call me
                 </Button>
                 <div>
@@ -140,4 +144,4 @@ const CallBackForm = React.memo(({ withImg }) => {
   );
 });
 
-export default React.memo(CallBackForm);
+export default CallBackForm;
