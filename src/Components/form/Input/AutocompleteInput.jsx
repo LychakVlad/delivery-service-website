@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
-import { CircularProgress } from '@mui/material';
+import useDebounce from '../../../hooks/useDebounce';
+import { fetchCities } from '../../../api/fetchCities';
+import SuggestionsList from './SuggestionsList/SuggestionsList';
+import SuggestionsLoad from './SuggestionsList/SuggestionsLoad';
 
 const AutocompleteInput = ({
   value,
@@ -25,17 +27,12 @@ const AutocompleteInput = ({
     setIsFilled(!!value);
   }, [value]);
 
-  const handleChange = (event) => {
-    const searchTerm = event.target.value;
-    setSearchTerm(searchTerm);
-
+  const handleSearch = useDebounce((searchTerm) => {
     if (searchTerm.length > 0) {
       setLoading(true);
-      axios
-        .get(
-          `https://nominatim.openstreetmap.org/search?q=${searchTerm}&format=json&extratags=place_id,display_name,type,lat,lon&accept-language=en&countrycodes=us`
-        )
+      fetchCities(searchTerm)
         .then((response) => {
+          console.log(response);
           const suggestions = response.data;
           setSuggestions(suggestions);
           setError(!suggestions.find((s) => s.display_name === searchTerm));
@@ -56,6 +53,12 @@ const AutocompleteInput = ({
       setSuggestions([]);
       setError(false);
     }
+  }, 500);
+
+  const handleChange = (event) => {
+    const searchTerm = event.target.value;
+    setSearchTerm(searchTerm);
+    handleSearch(searchTerm);
   };
 
   const handleClearInput = () => {
@@ -100,26 +103,12 @@ const AutocompleteInput = ({
           </span>
         )}
       </div>
-      {loading && suggestions.length === 0 && (
-        <ul className="input-suggestions__list">
-          <li className="input-suggestions__loading-block">
-            <CircularProgress />
-            <p className="input-suggestions__loading-text"> Loading...</p>
-          </li>
-        </ul>
-      )}
+      {loading && suggestions.length === 0 && <SuggestionsLoad />}
       {!loading && suggestions.length > 0 && (
-        <ul className="input-suggestions__list">
-          {suggestions.map((suggestion) => (
-            <li
-              className="input-suggestions__point"
-              key={suggestion.osm_id}
-              onClick={() => handleSelect(suggestion)}
-            >
-              {suggestion.display_name}
-            </li>
-          ))}
-        </ul>
+        <SuggestionsList
+          suggestions={suggestions}
+          handleSelect={handleSelect}
+        />
       )}
 
       {description && <div className="input-description">{description}</div>}

@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import './CallBackForm.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Input from '../form/Input/Input';
@@ -8,7 +8,7 @@ import Illustration from '../../assets/big-illustration.svg';
 import Modal from '../ui/modal/Modal';
 import { useDisableBodyScroll } from '../../hooks/useDisableBodyScroll';
 
-const CallBackForm = memo(({ withImg }) => {
+const CallBackForm = React.memo(({ withImg }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const [inputValue, setInputValue] = useState({
@@ -57,8 +57,8 @@ const CallBackForm = memo(({ withImg }) => {
     }
   };
 
-  const handleButtonClick = useCallback(() => {
-    handleSubmit();
+  const handleButtonClick = useCallback((event) => {
+    handleSubmit(event);
   }, []);
 
   useDisableBodyScroll(submitted);
