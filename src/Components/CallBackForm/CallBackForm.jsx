@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import './CallBackForm.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Input from '../form/Input/Input';
@@ -8,7 +8,7 @@ import Illustration from '../../assets/big-illustration.svg';
 import Modal from '../ui/modal/Modal';
 import { useDisableBodyScroll } from '../../hooks/useDisableBodyScroll';
 
-const CallBackForm = ({ withImg }) => {
+const CallBackForm = memo(({ withImg }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const [inputValue, setInputValue] = useState({
@@ -26,16 +26,16 @@ const CallBackForm = ({ withImg }) => {
 
   const { name, tel, email, isAgree1, isAgree2 } = inputValue;
 
-  const handleChange = (event) => {
+  const handleChange = useCallback((event) => {
     const { name, value, type, checked } = event.target;
 
     setErrors('');
 
-    setInputValue({
-      ...inputValue,
+    setInputValue((prevInputValue) => ({
+      ...prevInputValue,
       [name]: type === 'checkbox' ? checked : value,
-    });
-  };
+    }));
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -56,6 +56,10 @@ const CallBackForm = ({ withImg }) => {
       });
     }
   };
+
+  const handleButtonClick = useCallback(() => {
+    handleSubmit();
+  }, []);
 
   useDisableBodyScroll(submitted);
 
@@ -102,7 +106,7 @@ const CallBackForm = ({ withImg }) => {
                   name="tel"
                   label="Phone"
                 />
-                <Button onClick={handleSubmit} test="call-btn">
+                <Button onClick={handleButtonClick} test="call-btn">
                   Call me
                 </Button>
                 <div>
@@ -134,6 +138,6 @@ const CallBackForm = ({ withImg }) => {
       {submitted ? <Modal onClick={setSubmitted} test="call-modal" /> : ''}
     </div>
   );
-};
+});
 
-export default CallBackForm;
+export default React.memo(CallBackForm);

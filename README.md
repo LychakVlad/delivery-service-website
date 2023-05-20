@@ -1,1 +1,2 @@
-do smth with second toggle on calculator
+Do tests to calculator
+Do tests to the map

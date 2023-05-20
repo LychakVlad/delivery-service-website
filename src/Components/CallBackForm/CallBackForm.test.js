@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import CallBackForm from './CallBackForm';
 
 describe('Test Call Back Form', () => {
-  test('Name validation', () => {
+  test('Validating name input field.', () => {
     render(<CallBackForm />);
     const btn = screen.getByTestId('call-btn');
     const inputName = screen.getByLabelText(/how do i adress you?/i);
@@ -26,7 +26,7 @@ describe('Test Call Back Form', () => {
     ).not.toBeInTheDocument();
   });
 
-  test('Email validation', () => {
+  test('Validating email input field.', () => {
     render(<CallBackForm />);
     const btn = screen.getByTestId('call-btn');
     const inputEmail = screen.getByLabelText(/e-mail/i);
@@ -49,7 +49,7 @@ describe('Test Call Back Form', () => {
     ).not.toBeInTheDocument();
   });
 
-  test('Checkbox validation', () => {
+  test('Validating checkbox .', () => {
     render(<CallBackForm />);
     const btn = screen.getByTestId('call-btn');
     const checkbox = screen.getByLabelText(/I consent to the processing of/i);
@@ -67,7 +67,7 @@ describe('Test Call Back Form', () => {
     expect(screen.queryByTestId('call-error-checkbox')).not.toBeInTheDocument();
   });
 
-  test('Form sucsess', () => {
+  test('Form sucsess case', () => {
     render(<CallBackForm />);
     const btn = screen.getByTestId('call-btn');
     const checkbox = screen.getByLabelText(/I consent to the processing of /i);

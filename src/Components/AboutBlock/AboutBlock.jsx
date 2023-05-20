@@ -1,8 +1,9 @@
 import React from 'react';
 import './AboutBlock.scss';
 import FirstTitle from '../ui/titles/FirstTitle';
-import Illustration from '../../assets/big-ill.svg';
 import Photo from '../../assets/photo.jpg';
+
+const Illustration = React.lazy(() => import('../../assets/big-ill.svg'));
 
 const AboutBlock = () => {
   return (

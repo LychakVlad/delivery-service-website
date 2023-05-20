@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import TopMenu from '../components/TopMenu/TopMenu';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import Calculator from '../components/Calculator/Calculator';
-import Map from '../components/Map/Map';
 import LargeCardsBlock from '../components/Cards/LargeCardsBlock/LargeCardsBlock';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import MenuList from '../components/MenuList/MenuList';
@@ -12,6 +11,7 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import CardIcon from '../assets/small-illustration.svg';
 import LargeCardIcon from '../assets/delivery-illustration.svg';
 import slide1 from '../assets/slide1.jpg';
+const Map = React.lazy(() => import('../components/Map/Map'));
 
 const Main = () => {
   const pointsThree = [
@@ -140,7 +140,10 @@ const Main = () => {
       <TopMenu content={headingSlides} withDelivery={true} />
       <MidCardsBlock content={midCardsContent} withButton={true} />
       <Calculator />
-      <Map />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Map />
+      </Suspense>
+
       <LargeCardsBlock content={content} title={largeCardsTitle} />
       <SmallCardsBlock content={cards} img={CardIcon} position={true} />
       <MenuList points={pointsThree} />

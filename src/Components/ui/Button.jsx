@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.scss';
 import { Link } from 'react-scroll';
 
-const Button = ({ children, style, onClick, link, test }) => {
+const Button = React.memo(({ children, style, onClick, link, test }) => {
   return (
     <>
       {link && (
@@ -28,6 +28,6 @@ const Button = ({ children, style, onClick, link, test }) => {
       )}
     </>
   );
-};
+});
 
 export default Button;

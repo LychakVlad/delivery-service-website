@@ -27,7 +27,7 @@ const MapMenu = ({
       <AutocompleteInput
         type="text"
         value={cityFind}
-        name="to"
+        name="findCity"
         label="Find City"
         required
         setSearchTerm={setCityFind}

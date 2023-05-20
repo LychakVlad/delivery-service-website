@@ -83,12 +83,14 @@ const AutocompleteInput = ({
           type={type}
           value={value}
           name={name}
+          id={name}
           className={`form-control ${isFilled ? 'filled' : ''} ${
             error ? 'error' : ''
           }`}
           placeholder={placeholder}
           onChange={handleChange}
           required={required}
+          data-testid="autocomplete-input"
         />
 
         {label && <label htmlFor={name}>{label}</label>}
