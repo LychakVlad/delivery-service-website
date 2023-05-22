@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import './Toggle.scss';
 
-const Toggle = ({ clickHandle, firstTitle, secondTitle, test }) => {
+const Toggle = React.memo(({ clickHandle, firstTitle, secondTitle, test }) => {
   const [active, setActive] = useState(false);
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     clickHandle();
     setActive(!active);
-  };
+  }, [clickHandle, active]);
 
   return (
     <div
@@ -20,6 +20,6 @@ const Toggle = ({ clickHandle, firstTitle, secondTitle, test }) => {
       <span className="toggle-label">{secondTitle}</span>
     </div>
   );
-};
+});
 
 export default Toggle;

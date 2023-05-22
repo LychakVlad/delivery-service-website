@@ -1,7 +1,7 @@
 import React from 'react';
 import ThirdTitle from '../ui/titles/ThirdTitle';
 
-function TotalSection({ Icon, timeToDelivery, prices, test }) {
+const TotalSection = React.memo(({ Icon, timeToDelivery, prices, test }) => {
   return (
     <div className="calculator__total" data-testid={test ? test : undefined}>
       <div className="calculator__time">
@@ -53,6 +53,6 @@ function TotalSection({ Icon, timeToDelivery, prices, test }) {
       </div>
     </div>
   );
-}
+});
 
 export default TotalSection;

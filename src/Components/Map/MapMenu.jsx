@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Toggle from '../form/toggle/Toggle';
 import ThirdTitle from '../ui/titles/ThirdTitle';
 import CheckBox from '../form/checkbox/CheckBox';
@@ -18,9 +18,9 @@ const MapMenu = ({
   setCityFind,
 }) => {
   const [activeTab, setActiveTab] = useState('pickup');
-  const toggleHandle = () => {
+  const toggleHandle = useCallback(() => {
     setActiveTab(activeTab === 'details' ? 'pickup' : 'details');
-  };
+  }, [activeTab]);
 
   return (
     <div className="map-menu" data-testid="map-menu">
