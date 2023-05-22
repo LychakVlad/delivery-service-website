@@ -69,7 +69,7 @@ const Map = () => {
   }
 
   return (
-    <div className="map">
+    <div className="map" data-testid="map-component">
       <div className="container">
         <SecondTitle title="It's convenient to be close by" />
         <MapMenu

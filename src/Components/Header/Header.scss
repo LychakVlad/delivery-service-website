@@ -7,6 +7,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  transition: border-radius 0.3s ease;
 
   &--rounded {
     border-bottom-right-radius: 40px;

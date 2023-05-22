@@ -23,7 +23,7 @@ const MapMenu = ({
   };
 
   return (
-    <div className="map-menu">
+    <div className="map-menu" data-testid="map-menu">
       <AutocompleteInput
         type="text"
         value={cityFind}
@@ -37,9 +37,10 @@ const MapMenu = ({
         clickHandle={toggleHandle}
         firstTitle="Pick up"
         secondTitle="Details"
+        test="map-toggle"
       />
       {activeTab === 'details' && (
-        <div>
+        <div data-testid="map-details">
           <ThirdTitle title="Find pickup point" />
           <p className="map-menu__desc">
             Here, you can explore pickup points and filter them based on your
@@ -51,7 +52,7 @@ const MapMenu = ({
       )}
 
       {activeTab === 'pickup' && (
-        <div className="map-menu__checkboxes">
+        <div className="map-menu__checkboxes" data-testid="map-pickup">
           <div className="map-menu__column-left">
             <ThirdTitle title="Show me" />
             <CheckBox
