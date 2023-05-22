@@ -4,10 +4,16 @@ import { CircularProgress } from '@mui/material';
 
 const SuggestionsLoad = ({ test }) => {
   return (
-    <ul className="suggestions__list" data-testid={test ? test : undefined}>
-      <li className="suggestions__loading-block">
+    <ul className="suggestions__list">
+      <li className="suggestions__loading-block ">
         <CircularProgress />
-        <p className="suggestions__loading-text"> Loading...</p>
+        <p
+          className="suggestions__loading-text"
+          data-testid={test ? test : undefined}
+        >
+          {' '}
+          Loading...
+        </p>
       </li>
     </ul>
   );

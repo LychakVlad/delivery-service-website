@@ -42,18 +42,63 @@ describe('Calculator', () => {
     };
   });
 
-  test('should calculate shipping cost', async () => {
-    axios.get.mockResolvedValueOnce(response); // Mock the axios.get response
+  test('should render the Calculator component correctly', () => {
+    render(<Calculator />);
+    const fromInput = screen.getByLabelText('From');
+    const toInput = screen.getByLabelText('To');
+    const calculateButton = screen.getByRole('button', { name: /calculate/i });
+
+    expect(fromInput).toBeInTheDocument();
+    expect(toInput).toBeInTheDocument();
+    expect(calculateButton).toBeInTheDocument();
+  });
+
+  test('should clear input value when clear icon is clicked', async () => {
+    render(<Calculator />);
+    const input = screen.getByTestId('autocomplete-input-to');
+
+    fireEvent.change(input, { target: { value: 'fa' } });
+    fireEvent.click(screen.getByTestId('clear-icon-to'));
+
+    await waitFor(() => {
+      expect(input.value).toBe('');
+    });
+  });
+
+  test('should select a suggestion when clicked', async () => {
+    axios.get.mockResolvedValueOnce(response);
 
     render(<Calculator />);
-    const input = screen.getByLabelText('To'); // Get the input field by its associated label
-    fireEvent.change(input, { target: { value: 'fa' } }); // Simulate the change event with the input value
+    const input = screen.getByLabelText('To');
 
-    // Wait for the suggestions to be loaded
-    await waitFor(() => screen.getAllByTestId('suggestion-item'));
+    fireEvent.change(input, { target: { value: 'fa' } });
 
-    const suggestions = screen.getAllByTestId('suggestion-item'); // Get the suggestion items
-    expect(suggestions.length).toBe(4);
-    expect(axios.get).toHaveBeenCalledTimes(1);
+    await waitFor(() => {
+      const suggestionItems = screen.getAllByTestId('suggestion-item');
+      fireEvent.click(suggestionItems[0]);
+
+      expect(input.value).toBe(response.data[0].display_name);
+      expect(screen.queryAllByTestId('suggestion-item')).toHaveLength(0);
+    });
+  });
+
+  test('should update the "from" input value correctly', () => {
+    render(<Calculator />);
+    const fromInput = screen.getByLabelText('From');
+    const newValue = 'New York';
+
+    fireEvent.change(fromInput, { target: { value: newValue } });
+
+    expect(fromInput.value).toBe(newValue);
+  });
+
+  test('should update the "to" input value correctly', () => {
+    render(<Calculator />);
+    const toInput = screen.getByLabelText('To');
+    const newValue = 'Los Angeles';
+
+    fireEvent.change(toInput, { target: { value: newValue } });
+
+    expect(toInput.value).toBe(newValue);
   });
 });

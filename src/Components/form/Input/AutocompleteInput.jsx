@@ -32,7 +32,7 @@ const AutocompleteInput = ({
       setLoading(true);
       fetchCities(searchTerm)
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
           const suggestions = response.data;
           setSuggestions(suggestions);
           setError(!suggestions.find((s) => s.display_name === searchTerm));
@@ -98,13 +98,17 @@ const AutocompleteInput = ({
 
         {label && <label htmlFor={name}>{label}</label>}
         {isFilled && (
-          <span className="cross-icon" onClick={handleClearInput}>
+          <span
+            className="cross-icon"
+            data-testid={`clear-icon-${name}`}
+            onClick={handleClearInput}
+          >
             <CloseIcon />
           </span>
         )}
       </div>
       {loading && suggestions.length === 0 && (
-        <SuggestionsLoad test="loading-icon" />
+        <SuggestionsLoad test="suggestion-loading" />
       )}
       {!loading && suggestions.length > 0 && (
         <SuggestionsList
