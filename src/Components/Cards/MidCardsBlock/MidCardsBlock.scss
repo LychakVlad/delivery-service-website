@@ -69,6 +69,7 @@
   overflow: hidden;
   position: relative;
   height: 100%;
+  width: 100%;
 
   min-height: 176px;
 
@@ -92,12 +93,12 @@
   }
 
   &__img {
-    max-width: 150px;
-    max-height: 100px;
+    max-width: 170px;
+    max-height: 150px;
     position: absolute;
 
-    bottom: 0;
-    right: 10%;
+    bottom: 10%;
+    right: 0;
     z-index: 1;
 
     @include xxlMaxBreakPoint {

@@ -3,7 +3,6 @@ import './MidCardsBlock.scss';
 import SecondTitle from '../../ui/titles/SecondTitle';
 import Button from '../../ui/Button';
 import MidCardItem from './MidCardItem';
-import CardIcon from '../../../assets/card-icon.svg';
 
 const MidCardsBlock = ({ content, withButton, link }) => {
   return (
@@ -19,7 +18,7 @@ const MidCardsBlock = ({ content, withButton, link }) => {
               <MidCardItem
                 title={item.title}
                 button={item.button}
-                img={CardIcon}
+                img={item.img}
                 key={index}
               />
             ))}

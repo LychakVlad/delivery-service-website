@@ -8,9 +8,13 @@ import MenuList from '../components/MenuList/MenuList';
 import BigSlider from '../components/BigSlider/BigSlider';
 import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
-import CardIcon from '../assets/small-illustration.svg';
 import LargeCardIcon from '../assets/delivery-illustration.svg';
 import slide1 from '../assets/slide1.jpeg';
+import slide2 from '../assets/slide2.jpeg';
+import slide3 from '../assets/slide3.jpeg';
+import CardIcon1 from '../assets/card-icon1.svg';
+import CardIcon2 from '../assets/card-icon2.svg';
+import CardIcon3 from '../assets/card-icon3.svg';
 const Map = React.lazy(() => import('../components/Map/Map'));
 
 const Main = () => {
@@ -39,19 +43,19 @@ const Main = () => {
 
   const cards = [
     {
-      title: 'My Account',
+      title: 'About',
       linkText: 'Read more',
     },
     {
-      title: 'My Account',
+      title: 'API',
       linkText: 'Read more',
     },
     {
-      title: 'My Account',
+      title: 'CMS',
       linkText: 'Read more',
     },
     {
-      title: 'My Account',
+      title: 'Widget',
       linkText: 'Read more',
     },
   ];
@@ -64,70 +68,60 @@ const Main = () => {
       img: slide1,
     },
     {
-      title: 'Delivery for online stores',
-      text: "Develop your business, and we'll bring the orders",
+      title: 'Fast and Reliable Delivery',
+      text: 'Get your products delivered quickly and reliably to your customers',
       btn: 'Connect',
-      img: slide1,
+      img: slide2,
     },
     {
-      title: 'Delivery for online stores',
-      text: "Develop your business, and we'll bring the orders",
+      title: 'Global Reach for Your Business',
+      text: "Expand your online store's reach worldwide with our international delivery services",
       btn: 'Connect',
-      img: slide1,
-    },
-    {
-      title: 'Delivery for online stores',
-      text: "Develop your business, and we'll bring the orders",
-      btn: 'Connect',
-      img: slide1,
+      img: slide3,
     },
   ];
 
   const midCardsContent = [
     {
-      title: 'Create and track orders',
+      title: 'Easy Order Management',
+      img: CardIcon1,
     },
     {
-      title: 'Create and track orders',
+      title: 'Fast Delivery',
+      img: CardIcon2,
     },
     {
-      title: 'Create and track orders',
-    },
-    {
-      title: 'Create and track orders',
+      title: 'Global Shipping',
+      img: CardIcon3,
     },
   ];
 
   const content = [
     {
-      title: 'Simple returns ',
-      text: 'We will return the order if the customer does not pick up the parcel ',
-      description: 'of the cost of direct delivery',
-      digit: '50%',
+      title: 'Easy Returns',
+      text: 'Convenient returns for uncollected parcels',
+      digit: '50% Off',
       icon: LargeCardIcon,
       shadow: true,
     },
     {
-      title: 'Simple returns ',
-      text: 'We will return the order if the customer does not pick up the parcel ',
-      description: 'of the cost of direct delivery',
-      digit: '50%',
+      title: 'Fast Delivery',
+      text: 'Quick and reliable delivery service',
+      digit: 'On-time',
       icon: LargeCardIcon,
       shadow: true,
     },
     {
-      title: 'Simple returns ',
-      text: 'We will return the order if the customer does not pick up the parcel ',
-      description: 'of the cost of direct delivery',
-      digit: '50%',
+      title: 'Global Shipping',
+      text: 'Expand your business worldwide',
+      digit: 'International Reach',
       icon: LargeCardIcon,
       shadow: true,
     },
     {
-      title: 'Simple returns ',
-      text: 'We will return the order if the customer does not pick up the parcel ',
-      description: 'of the cost of direct delivery',
-      digit: '50%',
+      title: 'Real-time Tracking',
+      text: 'Track orders in real-time',
+      digit: 'Track Every Step',
       icon: LargeCardIcon,
       shadow: true,
     },
@@ -145,7 +139,7 @@ const Main = () => {
       </Suspense>
 
       <LargeCardsBlock content={content} title={largeCardsTitle} />
-      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <SmallCardsBlock content={cards} position={true} />
       <MenuList points={pointsThree} />
       <BigSlider />
       <IconsSection />
