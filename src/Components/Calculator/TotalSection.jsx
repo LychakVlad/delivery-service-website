@@ -1,9 +1,9 @@
 import React from 'react';
 import ThirdTitle from '../ui/titles/ThirdTitle';
 
-function TotalSection({ Icon, timeToDelivery, prices }) {
+function TotalSection({ Icon, timeToDelivery, prices, test }) {
   return (
-    <div className="calculator__total">
+    <div className="calculator__total" data-testid={test ? test : undefined}>
       <div className="calculator__time">
         <div className="calculator__time-option">
           <img src={Icon} alt="icon" />

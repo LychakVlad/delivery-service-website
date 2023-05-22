@@ -101,4 +101,47 @@ describe('Calculator', () => {
 
     expect(toInput.value).toBe(newValue);
   });
+
+  test('should show the total section when the calculate button is clicked and conditions are met based on active tab', () => {
+    render(<Calculator />);
+
+    const fromInput = screen.getByLabelText('From');
+    const toInput = screen.getByLabelText('To');
+    const calculateButton = screen.getByRole('button', { name: /calculate/i });
+
+    fireEvent.change(fromInput, { target: { value: 'New York' } });
+    fireEvent.change(toInput, { target: { value: 'Los Angeles' } });
+    fireEvent.click(calculateButton);
+
+    const totalSection = screen.queryByTestId('total-section');
+    expect(totalSection).not.toBeInTheDocument();
+
+    const calculatorItem = screen.getByText('S');
+    fireEvent.click(calculatorItem);
+    expect(totalSection).not.toBeInTheDocument();
+
+    fireEvent.click(calculateButton);
+    expect(screen.queryByTestId('total-section')).toBeInTheDocument();
+
+    const measureTab = screen.getByText('Exactly');
+    fireEvent.click(measureTab);
+    expect(totalSection).not.toBeInTheDocument();
+
+    const lengthInput = screen.getByLabelText('Length, ft');
+    const widthInput = screen.getByLabelText('Width, ft');
+    const heightInput = screen.getByLabelText('Height, ft');
+    const weightInput = screen.getByLabelText('Weight, lb');
+
+    fireEvent.change(lengthInput, { target: { value: '3' } });
+    fireEvent.change(widthInput, { target: { value: '4' } });
+    fireEvent.change(heightInput, { target: { value: '5' } });
+    fireEvent.change(weightInput, { target: { value: '10' } });
+
+    fireEvent.click(calculateButton);
+    expect(screen.queryByTestId('total-section')).toBeInTheDocument();
+
+    const sizesTab = screen.getByText('Estimated');
+    fireEvent.click(sizesTab);
+    expect(totalSection).not.toBeInTheDocument();
+  });
 });

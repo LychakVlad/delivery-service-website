@@ -247,6 +247,7 @@ const Calculator = () => {
                 Icon={Icon}
                 timeToDelivery={timeToDelivery}
                 prices={prices}
+                test="total-section"
               />
             )}
           </div>
