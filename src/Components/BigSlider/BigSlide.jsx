@@ -1,6 +1,6 @@
 import React from 'react';
 import ThirdTitle from '../ui/titles/ThirdTitle';
-import Photo from '../../assets/photo.jpg';
+import Photo from '../../assets/photo.jpeg';
 
 const BigSlide = () => {
   return (

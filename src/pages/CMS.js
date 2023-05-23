@@ -4,7 +4,7 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
-import slide1 from '../assets/slide1.jpg';
+import slide1 from '../assets/slide1.jpeg';
 import CMSBlock from '../components/CMSBlock/CMSBlock';
 
 const CMS = () => {

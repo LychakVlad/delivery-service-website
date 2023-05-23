@@ -1,10 +1,9 @@
 import Button from '../ui/Button';
+import ImgWithFallback from '../ui/ImgWithFallback';
 import FirstTitle from '../ui/titles/FirstTitle';
 import './MainMenu.scss';
 
-import React from 'react';
-
-const MainMenuItem = ({ img, title, text, btn }) => {
+const MainMenuItem = ({ img, title, text, btn, webp }) => {
   return (
     <div>
       <div className="main-menu__wrapper">
@@ -14,7 +13,12 @@ const MainMenuItem = ({ img, title, text, btn }) => {
           {btn}
         </Button>
       </div>
-      <img src={img} alt="slide-img" className="main-menu__img" />
+      <ImgWithFallback
+        src={webp}
+        fallback={img}
+        alt="slide-img"
+        className="main-menu__img"
+      />
     </div>
   );
 };

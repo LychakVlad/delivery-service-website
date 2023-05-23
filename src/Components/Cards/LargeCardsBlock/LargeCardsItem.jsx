@@ -19,8 +19,22 @@ const LargeCardsItem = ({
       {description && (
         <div className="large-card-item__text">{description}</div>
       )}
-      {icon && <img src={icon} alt="icon" className="large-card-item__icon" />}
-      {img && <img src={img} alt="icon-img" className="large-card-item__img" />}
+      {icon && (
+        <img
+          src={icon}
+          alt="icon"
+          className="large-card-item__icon"
+          loading="lazy"
+        />
+      )}
+      {img && (
+        <img
+          src={img}
+          alt="icon-img"
+          className="large-card-item__img"
+          loading="lazy"
+        />
+      )}
       {shadow ? (
         <div className="shadow"></div>
       ) : (

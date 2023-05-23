@@ -1,4 +1,5 @@
 @import '../../sassStyles/mixins.scss';
+@import '../../sassStyles/variables.scss';
 
 .rates {
   margin-top: 56px;
@@ -134,7 +135,7 @@
   &-icons__wrapper {
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(118.65deg, #005bff 13.87%, #2eb3ff 82.33%);
+    background: $BGGradient;
     border-radius: 20px;
     display: flex;
     align-items: center;

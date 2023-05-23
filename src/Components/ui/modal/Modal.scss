@@ -30,7 +30,7 @@
       margin: 16px 0px 32px;
     }
 
-    svg {
+    img {
       width: 200px;
       height: 200px;
     }
@@ -48,5 +48,11 @@
       width: 26px;
       height: 26px;
     }
+  }
+
+  &__center-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -5,7 +5,7 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MenuList from '../components/MenuList/MenuList';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
-import slide1 from '../assets/slide1.jpg';
+import slide1 from '../assets/slide1.jpeg';
 
 const Widget = () => {
   const pointsFive = [

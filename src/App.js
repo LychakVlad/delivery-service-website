@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PageLayout />}>
-            <Route path="/main" element={<Main />} />
+            <Route path="/" element={<Main />} />
             <Route path="/xdoc" element={<XDoc />} />
             <Route path="/widget" element={<Widget />} />
             <Route path="/api" element={<API />} />

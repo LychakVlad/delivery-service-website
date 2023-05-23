@@ -49,7 +49,7 @@ const Map = () => {
   }, [mainCoords]);
 
   const customIcon = new Icon({
-    iconUrl: 'https://img.icons8.com/?size=512&id=sxPBKmDA7kZP&format=png',
+    iconUrl: require('../../assets/map-pin.png'),
     iconSize: [38, 38],
   });
 
@@ -95,6 +95,7 @@ const Map = () => {
             <TileLayer
               attribution="Stadia Outdoors"
               url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png"
+              lazy={true}
             />
             <MarkerClusterGroup
               chunkedLoading

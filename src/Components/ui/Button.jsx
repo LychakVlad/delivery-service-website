@@ -7,14 +7,15 @@ const Button = React.memo(({ children, style, onClick, link, test }) => {
     <>
       {link && (
         <Link
-          className={`button ${style}`}
+          className={`button ${style} link-button`}
           to={link}
+          href={link}
           spy={true}
           smooth={true}
           offset={-70}
           duration={500}
         >
-          <div className="link-button">{children}</div>
+          {children}
         </Link>
       )}
       {!link && (

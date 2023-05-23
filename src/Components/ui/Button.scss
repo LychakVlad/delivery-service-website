@@ -4,28 +4,26 @@
   width: 100%;
   cursor: pointer;
   border: transparent;
-  background-color: $BGBlue;
+  background-color: $BGButton;
   color: $textPrimaryWhite;
   padding: 14px 8px;
   border-radius: 12px;
   transition: background 0.3s ease;
   text-decoration: none;
 
-  .link-button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
 
   &:hover {
-    background-color: #004ed6;
+    background-color: #1c3f99;
   }
 
   &:active {
-    background-color: #003ead;
+    background-color: #1a4ea7;
   }
 
   &--white {

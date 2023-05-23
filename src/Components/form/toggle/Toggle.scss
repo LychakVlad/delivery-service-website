@@ -1,8 +1,10 @@
+@import '../../../sassStyles/variables.scss';
+
 .toggle {
   position: relative;
-  width: 240px;
+  width: 230px;
   height: 48px;
-  background-color: #e9eef1;
+  background-color: $StrGray;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -10,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid #e9eef1;
+  border: 1px solid #e1e1e1;
 
   .toggle-label {
     font-weight: 400;
@@ -23,14 +25,11 @@
     color: #001a34;
     z-index: 1;
     user-select: none;
-
-    &:last-child {
-    }
   }
 
   .toggle-ball {
     position: absolute;
-    bottom: -2px;
+    bottom: -1px;
     left: 0;
     width: 50%;
     height: 48px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Error.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
-const Illustration = React.lazy(() => import('../../assets/error-ill.svg'));
+import Illustration from '../../assets/error-ill.jpeg';
 
 const ErrorBlock = () => {
   return (
@@ -17,7 +17,7 @@ const ErrorBlock = () => {
             <p className="error__text">
               There is an error in the address or the page has been deleted.
             </p>
-            <a href="/main" className="error__link">
+            <a href="/" className="error__link">
               Home
             </a>
           </div>

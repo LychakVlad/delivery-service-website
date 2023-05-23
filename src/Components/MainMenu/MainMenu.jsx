@@ -19,13 +19,14 @@ const MainMenu = ({ content }) => {
           bulletActiveClass: 'my-pagination-bullet-active',
         }}
       >
-        {content.map((item) => (
-          <SwiperSlide key={Math.random()}>
+        {content.map((item, index) => (
+          <SwiperSlide key={index}>
             <MainMenuItem
               img={item.img}
               title={item.title}
               text={item.text}
               btn={item.btn}
+              webp={item.webp}
             />
           </SwiperSlide>
         ))}

@@ -4,7 +4,7 @@ import SecondTitle from '../ui/titles/SecondTitle';
 import Input from '../form/Input/Input';
 import Button from '../ui/Button';
 import CheckBox from '../form/checkbox/CheckBox';
-import Illustration from '../../assets/big-illustration.svg';
+import Illustration from '../../assets/big-illustration.jpeg';
 import Modal from '../ui/modal/Modal';
 import { useDisableBodyScroll } from '../../hooks/useDisableBodyScroll';
 

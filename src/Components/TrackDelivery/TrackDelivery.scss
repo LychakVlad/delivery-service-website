@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 40px;
-  background-color: #4886ff;
+  background: $BGGradient;
 
   @include xlMaxBreakPoint {
     border-radius: 20px;

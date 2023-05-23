@@ -7,7 +7,7 @@ import MenuList from '../components/MenuList/MenuList';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
 import Rates from '../components/Rates/Rates';
-import slide1 from '../assets/slide1.jpg';
+import slide1 from '../assets/slide1.jpeg';
 
 const XDoc = () => {
   const pointsFive = [

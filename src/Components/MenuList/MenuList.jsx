@@ -1,8 +1,10 @@
 import React from 'react';
 import './MenuList.scss';
-import Illustration from '../../assets/big-illustration.svg';
+import Illustration from '../../assets/big-illustration.jpeg';
+import IllustrationW from '../../assets/big-illustration.webp';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Button from '../ui/Button';
+import ImgWithFallback from '../ui/ImgWithFallback';
 
 const MenuList = ({ withBG, points, title, rounded }) => {
   return (
@@ -13,11 +15,13 @@ const MenuList = ({ withBG, points, title, rounded }) => {
             withBG ? 'menu-list__wrapper--bg-gray' : ''
           }`}
         >
-          <img
-            src={Illustration}
+          <ImgWithFallback
+            src={IllustrationW}
+            fallback={Illustration}
             alt="illustration"
             className="menu-list__img"
           />
+
           <div className="menu-list__right">
             <SecondTitle title={title} />
             {points.map((item) => (

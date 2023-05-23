@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import './Header.scss';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Dropdown from '../ui/dropdown/Dropdown';
 
 const Header = () => {
@@ -55,14 +55,9 @@ const Header = () => {
     <header className={`header ${rounded ? 'header--rounded' : ''}`}>
       <div className="container">
         <div className="header__top">
-          {location.pathname === '/main' ? (
-            <div className="logo">Ex Drop</div>
-          ) : (
-            <a href="/main" className="logo">
-              Ex Drop
-            </a>
-          )}
-
+          <Link to="/" className="logo">
+            Ex Drop
+          </Link>
           <a
             href="tel:+1123-456-7890"
             className="call-icon"
@@ -74,9 +69,45 @@ const Header = () => {
         <div className="header__bottom">
           <nav className="header-bottom-menu">
             <ul className="header__nav-menu">
-              {links.map((item, index) =>
-                item !== 'Widgets' ? (
-                  <li className="header__nav-point" key={index}>
+              {links.map((item, index) => (
+                <li className="header__nav-point" key={index}>
+                  {item === 'Main' ? (
+                    <a
+                      href="/"
+                      className={`header__bottom-menu-item ${
+                        location.pathname === '/' ? 'is-active' : ''
+                      }`}
+                    >
+                      {item}
+                    </a>
+                  ) : item === 'Widgets' ? (
+                    <div
+                      ref={ref}
+                      onMouseEnter={onMouseEnter}
+                      onMouseLeave={onMouseLeave}
+                      key={index}
+                      className="header__nav-point"
+                    >
+                      <p
+                        onClick={() => setDropdown((prev) => !prev)}
+                        className={`header__bottom-menu-item ${
+                          location.pathname === '/cms' ||
+                          location.pathname === '/widget' ||
+                          location.pathname === '/api'
+                            ? 'is-active'
+                            : ''
+                        }`}
+                      >
+                        {item}
+                        <span className="arrow-container">
+                          <i className={`arrow ${dropdown ? 'rotate' : ''}`}>
+                            <Arrow />
+                          </i>
+                        </span>
+                      </p>
+                      <Dropdown points={dropdownLinks} dropdown={dropdown} />
+                    </div>
+                  ) : (
                     <a
                       href={`/${item.toLocaleLowerCase()}`}
                       className={`header__bottom-menu-item ${
@@ -84,39 +115,13 @@ const Header = () => {
                           ? 'is-active'
                           : ''
                       }`}
+                      key={index}
                     >
                       {item}
                     </a>
-                  </li>
-                ) : (
-                  <li
-                    key={index}
-                    className="header__nav-point"
-                    ref={ref}
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
-                  >
-                    <p
-                      onClick={() => setDropdown((prev) => !prev)}
-                      className={`header__bottom-menu-item ${
-                        location.pathname === '/cms' ||
-                        location.pathname === '/widget' ||
-                        location.pathname === '/api'
-                          ? 'is-active'
-                          : ''
-                      }`}
-                    >
-                      {item}
-                      <span className="arrow-container">
-                        <i className={`arrow ${dropdown ? 'rotate' : ''}`}>
-                          <Arrow />
-                        </i>
-                      </span>
-                    </p>
-                    <Dropdown points={dropdownLinks} dropdown={dropdown} />
-                  </li>
-                )
-              )}
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
