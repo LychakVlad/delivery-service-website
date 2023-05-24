@@ -17,6 +17,7 @@ import slide3w from '../assets/slide3.webp';
 import CardIcon1 from '../assets/card-icon1.svg';
 import CardIcon2 from '../assets/card-icon2.svg';
 import CardIcon3 from '../assets/card-icon3.svg';
+import LoadingBlock from '../components/LoadingBlock/LoadingBlock';
 const Map = React.lazy(() => import('../components/Map/Map'));
 const Calculator = React.lazy(() =>
   import('../components/Calculator/Calculator')
@@ -141,8 +142,10 @@ const Main = () => {
     <>
       <TopMenu content={headingSlides} withDelivery={true} />
       <MidCardsBlock content={midCardsContent} withButton={true} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingBlock />}>
         <Calculator />
+      </Suspense>
+      <Suspense fallback={<LoadingBlock />}>
         <Map />
       </Suspense>
 

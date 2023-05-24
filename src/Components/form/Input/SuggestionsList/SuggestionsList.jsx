@@ -4,7 +4,7 @@ import './SuggestionsList.scss';
 const SuggestionsList = ({ suggestions, handleSelect, test }) => {
   return (
     <ul className="suggestions__list">
-      {suggestions.map((suggestion, index) => (
+      {suggestions.map((suggestion) => (
         <li
           className="suggestions__point"
           key={suggestion.osm_id}
