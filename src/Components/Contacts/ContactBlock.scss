@@ -19,7 +19,7 @@
     }
   }
   &__first-column {
-    background-color: #eff3f6;
+    background-color: $BGGray;
     border-radius: 30px;
     padding: 32px;
 
@@ -34,7 +34,7 @@
     }
   }
   &__second-column {
-    background-color: #eff3f6;
+    background-color: $BGGray;
     border-radius: 30px;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -55,7 +55,7 @@
     }
   }
   &__third-column {
-    background-color: #eff3f6;
+    background-color: $BGGray;
     border-radius: 30px;
     padding: 32px;
 
@@ -68,7 +68,7 @@
     }
   }
   &__fourth-column {
-    background-color: #eff3f6;
+    background-color: $BGGray;
     border-radius: 30px;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -104,7 +104,7 @@
       font-size: 20px;
       line-height: 24px;
       letter-spacing: 0.4px;
-      color: #005bff;
+      color: $LinkTextColor;
       text-decoration: none;
       transition: opacity 0.3s ease;
 
