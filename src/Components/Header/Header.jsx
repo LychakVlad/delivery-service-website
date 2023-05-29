@@ -55,9 +55,73 @@ const Header = () => {
     <header className={`header ${rounded ? 'header--rounded' : ''}`}>
       <div className="container">
         <div className="header__top">
-          <Link to="/" className="logo">
-            Ex Drop
-          </Link>
+          <div className="header__left">
+            {location.pathname === '/' ? (
+              <div className="logo">Ex Drop</div>
+            ) : (
+              <a href="/" className="logo">
+                Ex Drop
+              </a>
+            )}
+            <nav className="header-bottom-menu">
+              <ul className="header__nav-menu">
+                {links.map((item, index) => (
+                  <li className="header__nav-point" key={index}>
+                    {item === 'Main' ? (
+                      <a
+                        href="/"
+                        className={`header__bottom-menu-item ${
+                          location.pathname === '/' ? 'is-active' : ''
+                        }`}
+                      >
+                        {item}
+                      </a>
+                    ) : item === 'Widgets' ? (
+                      <div
+                        ref={ref}
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                        key={index}
+                        className="header__nav-point"
+                      >
+                        <p
+                          onClick={() => setDropdown((prev) => !prev)}
+                          className={`header__bottom-menu-item ${
+                            location.pathname === '/cms' ||
+                            location.pathname === '/widget' ||
+                            location.pathname === '/api'
+                              ? 'is-active'
+                              : ''
+                          }`}
+                        >
+                          {item}
+                          <span className="arrow-container">
+                            <i className={`arrow ${dropdown ? 'rotate' : ''}`}>
+                              <Arrow />
+                            </i>
+                          </span>
+                        </p>
+                        <Dropdown points={dropdownLinks} dropdown={dropdown} />
+                      </div>
+                    ) : (
+                      <a
+                        href={`/${item.toLocaleLowerCase()}`}
+                        className={`header__bottom-menu-item ${
+                          location.pathname === `/${item.toLocaleLowerCase()}`
+                            ? 'is-active'
+                            : ''
+                        }`}
+                        key={index}
+                      >
+                        {item}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
           <a
             href="tel:+1123-456-7890"
             className="call-icon"
@@ -66,65 +130,7 @@ const Header = () => {
             <CallIcon key={1} />
           </a>
         </div>
-        <div className="header__bottom">
-          <nav className="header-bottom-menu">
-            <ul className="header__nav-menu">
-              {links.map((item, index) => (
-                <li className="header__nav-point" key={index}>
-                  {item === 'Main' ? (
-                    <a
-                      href="/"
-                      className={`header__bottom-menu-item ${
-                        location.pathname === '/' ? 'is-active' : ''
-                      }`}
-                    >
-                      {item}
-                    </a>
-                  ) : item === 'Widgets' ? (
-                    <div
-                      ref={ref}
-                      onMouseEnter={onMouseEnter}
-                      onMouseLeave={onMouseLeave}
-                      key={index}
-                      className="header__nav-point"
-                    >
-                      <p
-                        onClick={() => setDropdown((prev) => !prev)}
-                        className={`header__bottom-menu-item ${
-                          location.pathname === '/cms' ||
-                          location.pathname === '/widget' ||
-                          location.pathname === '/api'
-                            ? 'is-active'
-                            : ''
-                        }`}
-                      >
-                        {item}
-                        <span className="arrow-container">
-                          <i className={`arrow ${dropdown ? 'rotate' : ''}`}>
-                            <Arrow />
-                          </i>
-                        </span>
-                      </p>
-                      <Dropdown points={dropdownLinks} dropdown={dropdown} />
-                    </div>
-                  ) : (
-                    <a
-                      href={`/${item.toLocaleLowerCase()}`}
-                      className={`header__bottom-menu-item ${
-                        location.pathname === `/${item.toLocaleLowerCase()}`
-                          ? 'is-active'
-                          : ''
-                      }`}
-                      key={index}
-                    >
-                      {item}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <div className="header__bottom"></div>
       </div>
     </header>
   );

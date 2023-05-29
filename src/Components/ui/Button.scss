@@ -19,23 +19,23 @@
   justify-content: center;
 
   &:hover {
-    background-color: #1c3f99;
+    background-color: $BGButtonHover;
   }
 
   &:active {
-    background-color: #1a4ea7;
+    background-color: $BGButtonActive;
   }
 
   &--white {
     background-color: white;
-    color: #004ed6;
+    color: $LinkTextColor;
 
     &:hover {
-      background-color: #eff3f6;
+      background-color: $BGWhiteButtonHover;
     }
 
     &:active {
-      background-color: #e3e9ec;
+      background-color: $BGWhiteButtonActive;
     }
   }
 
