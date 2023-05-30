@@ -5,7 +5,7 @@ import BigSlide from './BigSlide';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const BigSlider = () => {
+const BigSlider = ({ content }) => {
   return (
     <div className="big-slider">
       <div className="container container--slider">
@@ -40,27 +40,11 @@ const BigSlider = () => {
               },
             }}
           >
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BigSlide />
-            </SwiperSlide>
+            {content.map((item) => (
+              <SwiperSlide>
+                <BigSlide content={item} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
         <div className="shadow"></div>

@@ -18,6 +18,13 @@ import CardIcon1 from '../assets/card-icon1.svg';
 import CardIcon2 from '../assets/card-icon2.svg';
 import CardIcon3 from '../assets/card-icon3.svg';
 import LoadingBlock from '../components/LoadingBlock/LoadingBlock';
+import Photo from '../assets/photo.jpeg';
+import Photo1 from '../assets/photo1.jpeg';
+import Photo2 from '../assets/photo2.jpeg';
+import Photo3 from '../assets/photo3.jpeg';
+import Photo4 from '../assets/photo4.jpeg';
+import Photo5 from '../assets/photo5.jpeg';
+
 const Map = React.lazy(() => import('../components/Map/Map'));
 const Calculator = React.lazy(() =>
   import('../components/Calculator/Calculator')
@@ -47,22 +54,26 @@ const Main = () => {
     },
   ];
 
-  const cards = [
+  const smallCards = [
     {
       title: 'About',
       linkText: 'Read more',
+      link: '/about',
     },
     {
       title: 'API',
       linkText: 'Read more',
+      link: '/api',
     },
     {
       title: 'CMS',
       linkText: 'Read more',
+      link: '/cms',
     },
     {
       title: 'Widget',
       linkText: 'Read more',
+      link: '/widget',
     },
   ];
 
@@ -90,7 +101,7 @@ const Main = () => {
     },
   ];
 
-  const midCardsContent = [
+  const midCards = [
     {
       title: 'Easy Order Management',
       img: CardIcon1,
@@ -105,7 +116,7 @@ const Main = () => {
     },
   ];
 
-  const content = [
+  const largeCards = [
     {
       title: 'Easy Returns',
       text: 'Convenient returns for uncollected parcels',
@@ -136,12 +147,57 @@ const Main = () => {
     },
   ];
 
+  const sliderContent = [
+    {
+      name: 'Mike Polo',
+      company: 'Amazon',
+      role: "Head of Buyer's Orders Department",
+      text: 'I would like to express my gratitude to the logistics company that has been providing excellent and punctual delivery services for our goods across the country for the past six months.',
+      img: Photo,
+    },
+    {
+      name: 'Sarah Johnson',
+      company: 'Google',
+      role: 'Senior Software Engineer',
+      text: "I'm incredibly impressed with the technical expertise and problem-solving skills demonstrated by this logistics company. They have been instrumental in ensuring the smooth delivery of our software products.",
+      img: Photo1,
+    },
+    {
+      name: 'Emily Thompson',
+      company: 'Apple',
+      role: 'Marketing Manager',
+      text: 'The marketing team at this logistics company has been a true partner in our promotional efforts. Their creative ideas and execution have significantly contributed to the success of our campaigns.',
+      img: Photo2,
+    },
+    {
+      name: 'John Doe',
+      company: 'Microsoft',
+      role: 'Product Manager',
+      text: 'As a product manager, I rely on efficient logistics services to ensure our products reach customers on time. This logistics company has consistently delivered exceptional service, helping us meet customer expectations.',
+      img: Photo3,
+    },
+    {
+      name: 'David Smith',
+      company: 'Facebook',
+      role: 'Operations Manager',
+      text: 'The operations team at this logistics company has played a crucial role in streamlining our supply chain. Their attention to detail and commitment to quality have significantly improved our operational efficiency.',
+      img: Photo4,
+    },
+    {
+      name: 'Jeff Lee',
+      company: 'Netflix',
+      role: 'Content Strategist',
+      text: 'Working with this logistics company has been a pleasure. Their expertise in content distribution and their dedication to delivering our shows and movies on time have been instrumental in our success.',
+      img: Photo5,
+    },
+  ];
+
   const largeCardsTitle = 'More perks';
 
   return (
     <>
       <TopMenu content={headingSlides} withDelivery={true} />
-      <MidCardsBlock content={midCardsContent} withButton={true} />
+      <MidCardsBlock content={midCards} withButton={true} />
       <Suspense fallback={<LoadingBlock />}>
         <Calculator />
       </Suspense>
@@ -149,10 +205,10 @@ const Main = () => {
         <Map />
       </Suspense>
 
-      <LargeCardsBlock content={content} title={largeCardsTitle} />
-      <SmallCardsBlock content={cards} position={true} />
+      <LargeCardsBlock content={largeCards} title={largeCardsTitle} />
+      <SmallCardsBlock content={smallCards} position={true} />
       <MenuList points={pointsThree} />
-      <BigSlider />
+      <BigSlider content={sliderContent} />
       <IconsSection />
       <CallBackForm />
     </>

@@ -3,7 +3,7 @@ import './SmallCardsBlock.scss';
 import SecondTitle from '../../ui/titles/SecondTitle';
 import SmallCardsItem from './SmallCardsItem';
 
-const SmallCardsBlock = ({ content, img, position }) => {
+const SmallCardsBlock = ({ content, position }) => {
   return (
     <div className="small-cards">
       <div className="container">
@@ -13,9 +13,9 @@ const SmallCardsBlock = ({ content, img, position }) => {
             {content.map((item, index) => (
               <SmallCardsItem
                 title={item.title}
-                img={img}
+                img={content.img}
                 linkText={item.linkText}
-                link="#"
+                link={item.link}
                 position={position}
                 key={index}
               />
