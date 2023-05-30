@@ -149,13 +149,6 @@ const Main = () => {
 
   const sliderContent = [
     {
-      name: 'Mike Polo',
-      company: 'Amazon',
-      role: "Head of Buyer's Orders Department",
-      text: 'I would like to express my gratitude to the logistics company that has been providing excellent and punctual delivery services for our goods across the country for the past six months.',
-      img: Photo,
-    },
-    {
       name: 'Sarah Johnson',
       company: 'Google',
       role: 'Senior Software Engineer',
@@ -189,6 +182,13 @@ const Main = () => {
       role: 'Content Strategist',
       text: 'Working with this logistics company has been a pleasure. Their expertise in content distribution and their dedication to delivering our shows and movies on time have been instrumental in our success.',
       img: Photo5,
+    },
+    {
+      name: 'Mike Polo',
+      company: 'Amazon',
+      role: "Head of Buyer's Orders Department",
+      text: 'I would like to express my gratitude to the logistics company that has been providing excellent and punctual delivery services for our goods across the country for the past six months.',
+      img: Photo,
     },
   ];
 

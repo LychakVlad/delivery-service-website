@@ -40,8 +40,8 @@ const BigSlider = ({ content }) => {
               },
             }}
           >
-            {content.map((item) => (
-              <SwiperSlide>
+            {content.map((item, index) => (
+              <SwiperSlide key={index}>
                 <BigSlide content={item} />
               </SwiperSlide>
             ))}
