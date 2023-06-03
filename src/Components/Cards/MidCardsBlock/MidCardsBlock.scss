@@ -103,7 +103,16 @@
     z-index: 1;
 
     @include xxlMaxBreakPoint {
-      max-width: 80px;
+      max-width: 100px;
+    }
+
+    @include xlMaxBreakPoint {
+      max-width: 200px;
+      right: 10%;
+    }
+
+    @include lgMaxBreakPoint {
+      right: 0;
     }
   }
 }

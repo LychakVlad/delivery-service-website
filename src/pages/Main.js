@@ -21,9 +21,9 @@ import slide3 from '../assets/slide3.jpeg';
 import slide1w from '../assets/slide1.webp';
 import slide2w from '../assets/slide2.webp';
 import slide3w from '../assets/slide3.webp';
-import CardIcon1 from '../assets/card-icon1.png';
-import CardIcon2 from '../assets/card-icon2.svg';
-import CardIcon3 from '../assets/card-icon3.svg';
+import CardIcon1 from '../assets/mid-card-icon1.png';
+import CardIcon2 from '../assets/mid-card-icon2.png';
+import CardIcon3 from '../assets/mid-card-icon3.png';
 import LoadingBlock from '../components/LoadingBlock/LoadingBlock';
 import Photo from '../assets/photo.jpeg';
 import Photo1 from '../assets/photo1.jpeg';
@@ -115,7 +115,7 @@ const Main = () => {
   const midCards = [
     {
       title: 'Easy Order Management',
-      img: CardIcon1,
+      img: CardIcon3,
     },
     {
       title: 'Fast Delivery',
@@ -123,7 +123,7 @@ const Main = () => {
     },
     {
       title: 'Global Shipping',
-      img: CardIcon3,
+      img: CardIcon1,
     },
   ];
 
