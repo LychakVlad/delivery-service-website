@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutBlock.scss';
 import FirstTitle from '../ui/titles/FirstTitle';
 import Photo from '../../assets/photo.jpg';
-import Illustration from '../../assets/big-illustration.jpeg';
+import Illustration from '../../assets/about-ill.png';
 
 const AboutBlock = () => {
   return (

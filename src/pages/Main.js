@@ -7,14 +7,21 @@ import MenuList from '../components/MenuList/MenuList';
 import BigSlider from '../components/BigSlider/BigSlider';
 import IconsSection from '../components/IconsSection/IconsSection';
 import CallBackForm from '../components/CallBackForm/CallBackForm';
-import LargeCardIcon from '../assets/delivery-illustration.svg';
+import LargeCardIcon from '../assets/card-icon1.png';
+import LargeCardIcon1 from '../assets/card-icon2.png';
+import LargeCardIcon2 from '../assets/card-icon3.png';
+import LargeCardIcon3 from '../assets/card-icon4.png';
+import SmallCardIcon1 from '../assets/small-card-icon1.png';
+import SmallCardIcon2 from '../assets/small-card-icon2.png';
+import SmallCardIcon3 from '../assets/small-card-icon3.png';
+import SmallCardIcon4 from '../assets/small-card-icon4.png';
 import slide1 from '../assets/slide1.jpeg';
 import slide2 from '../assets/slide2.jpeg';
 import slide3 from '../assets/slide3.jpeg';
 import slide1w from '../assets/slide1.webp';
 import slide2w from '../assets/slide2.webp';
 import slide3w from '../assets/slide3.webp';
-import CardIcon1 from '../assets/card-icon1.svg';
+import CardIcon1 from '../assets/card-icon1.png';
 import CardIcon2 from '../assets/card-icon2.svg';
 import CardIcon3 from '../assets/card-icon3.svg';
 import LoadingBlock from '../components/LoadingBlock/LoadingBlock';
@@ -59,21 +66,25 @@ const Main = () => {
       title: 'About',
       linkText: 'Read more',
       link: '/about',
+      img: SmallCardIcon1,
     },
     {
       title: 'API',
       linkText: 'Read more',
       link: '/api',
+      img: SmallCardIcon2,
     },
     {
       title: 'CMS',
       linkText: 'Read more',
       link: '/cms',
+      img: SmallCardIcon3,
     },
     {
       title: 'Widget',
       linkText: 'Read more',
       link: '/widget',
+      img: SmallCardIcon4,
     },
   ];
 
@@ -128,21 +139,21 @@ const Main = () => {
       title: 'Fast Delivery',
       text: 'Quick and reliable delivery service',
       digit: 'On-time',
-      icon: LargeCardIcon,
+      icon: LargeCardIcon1,
       shadow: true,
     },
     {
       title: 'Global Shipping',
       text: 'Expand your business worldwide',
       digit: 'International Reach',
-      icon: LargeCardIcon,
+      icon: LargeCardIcon2,
       shadow: true,
     },
     {
       title: 'Real-time Tracking',
       text: 'Track orders in real-time',
       digit: 'Track Every Step',
-      icon: LargeCardIcon,
+      icon: LargeCardIcon3,
       shadow: true,
     },
   ];

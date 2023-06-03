@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.scss';
 import { ReactComponent as Close } from '../../../assets/close-icon.svg';
-import Sucsess from '../../../assets/sucsess.jpeg';
+import Sucsess from '../../../assets/sucsess.png';
 import SucsessW from '../../../assets/sucsess.webp';
 import SecondTitle from '../titles/SecondTitle';
 import Button from '../Button';

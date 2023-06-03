@@ -1,7 +1,7 @@
 import React from 'react';
 import './Error.scss';
 import SecondTitle from '../ui/titles/SecondTitle';
-import Illustration from '../../assets/error-ill.jpeg';
+import Illustration from '../../assets/error-ill.png';
 
 const ErrorBlock = () => {
   return (

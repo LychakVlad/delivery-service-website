@@ -13,7 +13,7 @@ const SmallCardsBlock = ({ content, position }) => {
             {content.map((item, index) => (
               <SmallCardsItem
                 title={item.title}
-                img={content.img}
+                img={item.img}
                 linkText={item.linkText}
                 link={item.link}
                 position={position}

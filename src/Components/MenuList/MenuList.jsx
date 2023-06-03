@@ -1,6 +1,6 @@
 import React from 'react';
 import './MenuList.scss';
-import Illustration from '../../assets/big-illustration.jpeg';
+import Illustration from '../../assets/big-illustration.png';
 import IllustrationW from '../../assets/big-illustration.webp';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Button from '../ui/Button';

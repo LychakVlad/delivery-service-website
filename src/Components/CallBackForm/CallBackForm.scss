@@ -42,7 +42,7 @@
 .call-back__wrapper {
   background: $BGGray;
   border-radius: 40px;
-  padding: 60px 60px;
+  padding: 60px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -55,6 +55,7 @@
 
   @include lgMaxBreakPoint {
     border-radius: 20px;
+    padding: 24px;
   }
 }
 

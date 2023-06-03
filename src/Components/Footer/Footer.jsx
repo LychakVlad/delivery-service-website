@@ -36,17 +36,18 @@ const Footer = () => {
   const accordionContent = [
     {
       title: 'How quickly can you deliver my package?',
-      text: 'We offer a range of delivery services including rush, 3 hour, 5 hour, and same day delivery. Contact us for details.',
+      text: ' Our delivery services are designed to meet your time requirements. We offer a variety of options, including rush delivery, 3-hour delivery, 5-hour delivery, and same-day delivery. Feel free to reach out to us for specific details on each service.',
       key: 1,
     },
     {
-      title: 'What is the delivery fee for your services?',
-      text: 'The delivery fee depends on factors such as distance, service type, and package size/weight. We provide transparent pricing and can provide a quote based on the details you provide.',
+      title: 'What factors determine the delivery fee for your services?',
+      text: 'The delivery fee is determined based on several factors, such as the distance of the delivery, the type of service chosen, and the size/weight of the package. We believe in transparent pricing, so once you provide us with the necessary details, we can provide you with an accurate quote tailored to your specific requirements.',
       key: 2,
     },
     {
-      title: 'What is the maximum weight and size of package you can deliver?',
-      text: 'We can typically accommodate packages up to 70 pounds and 72 inches in length. Contact us to discuss options if your package exceeds these limits.',
+      title:
+        'What are the size and weight limits for the packages you can deliver?',
+      text: 'Our standard capacity allows us to handle packages weighing up to 70 pounds and measuring up to 72 inches in length. If you have a package that exceeds these limits, please get in touch with us so that we can explore alternative options to accommodate your specific needs.',
       key: 3,
     },
   ];
