@@ -31,8 +31,7 @@
     object-fit: cover;
     object-position: center;
   }
-  &__content {
-  }
+
   &__404 {
     font-weight: 900;
     font-size: 60px;
@@ -59,18 +58,18 @@
 
     color: white;
     text-decoration: none;
-    background-color: $BGBlue;
+    background-color: $BGButton;
     border-radius: 12px;
     padding: 14px 20px;
 
     transition: background 0.3s ease;
 
     &:hover {
-      background-color: #004ed6;
+      background-color: $BGButtonHover;
     }
 
     &:active {
-      background-color: #003ead;
+      background-color: $BGButtonActive;
     }
   }
 }
