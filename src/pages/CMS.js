@@ -4,77 +4,86 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
-import slide1 from '../assets/slide1.jpeg';
+import slide1 from '../assets/slide111.jpeg';
+import slide2 from '../assets/slide222.jpeg';
+import slide3 from '../assets/slide333.jpeg';
 import CMSBlock from '../components/CMSBlock/CMSBlock';
+import SmallCardIcon1 from '../assets/small-card-icon1.png';
+import SmallCardIcon2 from '../assets/small-card-icon2.png';
+import SmallCardIcon4 from '../assets/small-card-icon4.png';
+import CardIcon1 from '../assets/mid-card-icon1.png';
+import CardIcon2 from '../assets/mid-card-icon2.png';
+import CardIcon3 from '../assets/mid-card-icon3.png';
+import CardIcon4 from '../assets/mid-card-icon4.png';
 
 const CMS = () => {
-  const cards = [
+  const smallCards = [
     {
-      title: 'My Account',
+      title: 'About',
       linkText: 'Read more',
+      link: '/about',
+      img: SmallCardIcon1,
     },
     {
-      title: 'My Account',
+      title: 'API',
       linkText: 'Read more',
+      link: '/api',
+      img: SmallCardIcon2,
     },
     {
-      title: 'My Account',
+      title: 'Widget',
       linkText: 'Read more',
-    },
-    {
-      title: 'My Account',
-      linkText: 'Read more',
+      link: '/widget',
+      img: SmallCardIcon4,
     },
   ];
 
-  const content = [
+  const midCardsContent = [
     {
-      title: 'Create and track orders',
+      title: 'Order Tracking',
+      img: CardIcon3,
     },
     {
-      title: 'Create and track orders',
+      title: 'Speedy Delivery',
+      img: CardIcon2,
     },
     {
-      title: 'Create and track orders',
+      title: 'Worldwide Shipping',
+      img: CardIcon1,
     },
     {
-      title: 'Create and track orders',
+      title: 'Savings on Shipping',
+      img: CardIcon4,
     },
   ];
 
   const headingSlides = [
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Simplified CMS Integration',
+      text: 'Start delivering orders with Ex Drop effortlessly, no additional development required',
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Effortless Order Fulfillment',
+      text: 'Easily manage and deliver your orders using Ex Drop',
       btn: 'Connect',
-      img: slide1,
+      img: slide2,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Streamlined Delivery Solutions',
+      text: "Optimize your online store's operations with Ex Drop",
       btn: 'Connect',
-      img: slide1,
-    },
-    {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
-      btn: 'Connect',
-      img: slide1,
+      img: slide3,
     },
   ];
 
   return (
     <>
       <TopMenu content={headingSlides} />
-      <MidCardsBlock content={content} withButton={true} link={false} />
+      <MidCardsBlock content={midCardsContent} withButton={true} link={false} />
       <CMSBlock />
-      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <SmallCardsBlock content={smallCards} img={CardIcon} position={true} />
       <CallBackForm withImg={true} />
     </>
   );

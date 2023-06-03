@@ -4,67 +4,68 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MidCardsBlock from '../components/Cards/MidCardsBlock/MidCardsBlock';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
-import slide1 from '../assets/slide1.jpeg';
+import slide1 from '../assets/slide1111.jpeg';
+import slide2 from '../assets/slide2222.jpeg';
+import slide3 from '../assets/slide3333.jpeg';
+import SmallCardIcon1 from '../assets/small-card-icon1.png';
+import SmallCardIcon3 from '../assets/small-card-icon3.png';
+import SmallCardIcon4 from '../assets/small-card-icon4.png';
 
 const API = () => {
-  const cards = [
+  const smallCards = [
     {
-      title: 'My Account',
+      title: 'About',
       linkText: 'Read more',
+      link: '/about',
+      img: SmallCardIcon1,
     },
     {
-      title: 'My Account',
+      title: 'CMS',
       linkText: 'Read more',
+      link: '/cms',
+      img: SmallCardIcon3,
     },
     {
-      title: 'My Account',
+      title: 'Widget',
       linkText: 'Read more',
-    },
-    {
-      title: 'My Account',
-      linkText: 'Read more',
+      link: '/widget',
+      img: SmallCardIcon4,
     },
   ];
 
   const content = [
     {
-      title: 'Create and track orders',
+      title: 'Sign up for an Ex Drop API account',
     },
     {
-      title: 'Create and track orders',
+      title: 'Generate API credentials',
     },
     {
-      title: 'Create and track orders',
+      title: 'Authenticate your application with Ex Drop API',
     },
     {
-      title: 'Create and track orders',
+      title: 'Create and track orders using Ex Drop API',
     },
   ];
 
   const headingSlides = [
     {
-      title: 'Work easily with the Ex Drop API',
-      text: 'Automatically place and track orders through the Ex Drop API',
+      title: 'Seamless Integration with Ex Drop API',
+      text: 'Effortlessly manage and track orders using the Ex Drop API',
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'Work easily with the Ex Drop API',
-      text: 'Automatically place and track orders through the Ex Drop API',
+      title: 'Streamline Your Workflow with Ex Drop API',
+      text: 'Automate order placement and tracking through the Ex Drop API',
       btn: 'Connect',
-      img: slide1,
+      img: slide2,
     },
     {
-      title: 'Work easily with the Ex Drop API',
-      text: 'Automatically place and track orders through the Ex Drop API',
+      title: 'Enhance Efficiency with Ex Drop API',
+      text: 'Simplify order management and tracking with the Ex Drop API',
       btn: 'Connect',
-      img: slide1,
-    },
-    {
-      title: 'Work easily with the Ex Drop API',
-      text: 'Automatically place and track orders through the Ex Drop API',
-      btn: 'Connect',
-      img: slide1,
+      img: slide3,
     },
   ];
 
@@ -72,7 +73,7 @@ const API = () => {
     <>
       <TopMenu content={headingSlides} />
       <MidCardsBlock content={content} withButton={true} link={true} />
-      <SmallCardsBlock content={cards} img={CardIcon} position={true} />
+      <SmallCardsBlock content={smallCards} img={CardIcon} position={true} />
       <CallBackForm withImg={true} />
     </>
   );

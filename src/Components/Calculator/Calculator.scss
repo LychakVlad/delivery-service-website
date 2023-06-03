@@ -43,9 +43,6 @@
 
     padding-bottom: 12px;
     margin-bottom: 12px;
-
-    @include xlMaxBreakPoint {
-    }
   }
   &__size {
     background-color: white;
@@ -115,6 +112,11 @@
     display: flex;
     gap: 60px;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include xlMaxBreakPoint {
+      gap: 40px;
+    }
   }
 
   &__time-option {

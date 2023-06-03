@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './pages/Main';
-import XDoc from './pages/XDoc';
 import Error from './pages/Error';
 import Widget from './pages/Widget';
 import API from './pages/API';
@@ -10,6 +9,7 @@ import About from './pages/About';
 
 import PageLayout from './pages/PageLayout';
 import Privacy from './pages/Privacy';
+import Partners from './pages/Partners';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route element={<PageLayout />}>
             <Route path="/" element={<Main />} />
-            <Route path="/xdoc" element={<XDoc />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/widget" element={<Widget />} />
             <Route path="/api" element={<API />} />
             <Route path="/cms" element={<CMS />} />

@@ -5,7 +5,11 @@ import CallBackForm from '../components/CallBackForm/CallBackForm';
 import MenuList from '../components/MenuList/MenuList';
 import SmallCardsBlock from '../components/Cards/SmallCardsBlock/SmallCardsBlock';
 import CardIcon from '../assets/small-illustration.svg';
-import slide1 from '../assets/slide1.jpeg';
+import slide1 from '../assets/slide11111.jpeg';
+import slide2 from '../assets/slide22222.jpeg';
+import SmallCardIcon1 from '../assets/small-card-icon1.png';
+import SmallCardIcon3 from '../assets/small-card-icon3.png';
+import SmallCardIcon2 from '../assets/small-card-icon2.png';
 
 const Widget = () => {
   const pointsFive = [
@@ -25,49 +29,40 @@ const Widget = () => {
 
   const listTitle = 'How it works';
 
-  const cards = [
+  const smallCards = [
     {
-      title: 'We pick up and deliver goods daily ',
+      title: 'About',
       linkText: 'Read more',
+      link: '/about',
+      img: SmallCardIcon1,
     },
     {
-      title: 'We pick up and deliver goods daily ',
+      title: 'CMS',
       linkText: 'Read more',
+      link: '/cms',
+      img: SmallCardIcon3,
     },
     {
-      title: 'We pick up and deliver goods daily ',
+      title: 'API',
+
       linkText: 'Read more',
-    },
-    {
-      title: 'We pick up and deliver goods daily ',
-      linkText: 'Read more',
+      link: '/api',
+      img: SmallCardIcon2,
     },
   ];
 
   const headingSlides = [
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Powerful Widget Integration',
+      text: 'Effortlessly integrate Ex Drop widgets into your CMS without additional development',
       btn: 'Connect',
       img: slide1,
     },
     {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
+      title: 'Seamless Widget Integration',
+      text: 'Start delivering orders with Ex Drop widgets without additional development',
       btn: 'Connect',
-      img: slide1,
-    },
-    {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
-      btn: 'Connect',
-      img: slide1,
-    },
-    {
-      title: 'CMS Modules',
-      text: 'Start delivering orders with Ex Drop without additional development',
-      btn: 'Connect',
-      img: slide1,
+      img: slide2,
     },
   ];
 
@@ -81,7 +76,7 @@ const Widget = () => {
         rounded={true}
       />
       <Map />
-      <SmallCardsBlock content={cards} img={CardIcon} />
+      <SmallCardsBlock content={smallCards} img={CardIcon} />
       <CallBackForm withImg={true} />
     </>
   );

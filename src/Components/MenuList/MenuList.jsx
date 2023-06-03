@@ -1,7 +1,7 @@
 import React from 'react';
 import './MenuList.scss';
-import Illustration from '../../assets/big-illustration.png';
-import IllustrationW from '../../assets/big-illustration.webp';
+import Illustration from '../../assets/menu-list.png';
+import IllustrationW from '../../assets/menu-list.webp';
 import SecondTitle from '../ui/titles/SecondTitle';
 import Button from '../ui/Button';
 import ImgWithFallback from '../ui/ImgWithFallback';

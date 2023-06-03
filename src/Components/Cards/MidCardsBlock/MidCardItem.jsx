@@ -11,7 +11,14 @@ const MidCardItem = ({ title, button, img }) => {
           <a href="#1">{button}</a>
         </div>
       )}
-      <img src={img} alt="icon" className="mid-card-item__img" loading="lazy" />
+      {img && (
+        <img
+          src={img}
+          alt="icon"
+          className="mid-card-item__img"
+          loading="lazy"
+        />
+      )}
     </div>
   );
 };

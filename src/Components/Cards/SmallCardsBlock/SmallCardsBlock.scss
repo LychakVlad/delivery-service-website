@@ -44,10 +44,12 @@
 
   &--upper {
     img {
-      width: 100px;
+      width: 50%;
+
       position: relative;
       right: 0;
       bottom: 0;
+
       margin-bottom: 24px;
     }
   }
@@ -84,6 +86,8 @@
     color: $LinkTextColor;
 
     transition: opacity 0.3s ease;
+
+    margin-top: 12px;
 
     &:hover {
       opacity: 0.6;

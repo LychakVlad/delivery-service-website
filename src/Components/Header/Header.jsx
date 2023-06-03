@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { ReactComponent as CallIcon } from '../../assets/call-icon.svg';
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import './Header.scss';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Dropdown from '../ui/dropdown/Dropdown';
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
     window.innerWidth > 960 && setDropdown(false);
   };
 
-  const links = ['Main', 'XDoc', 'About', 'Contact', 'Widgets'];
+  const links = ['Main', 'Partners', 'About', 'Contact', 'Widgets'];
 
   const dropdownLinks = [
     {
