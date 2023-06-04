@@ -56,7 +56,9 @@ const Header = () => {
   ];
 
   const handleBurgerClick = () => {
-    setRounded(!rounded);
+    if (location.pathname === '/about' || location.pathname === '/contact') {
+      setRounded(!rounded);
+    }
     setOpen(!open);
     if (open) {
       document.body.classList.remove('active');

@@ -15,9 +15,15 @@ const HeaderMenu = ({ open }) => {
   return (
     <nav className={`header__mob ${open ? 'is-active' : ''}`}>
       <ul className="header__mob-list">
-        {links.map((item, index) => (
-          <li className="header__mob-point" key={index}>
-            {
+        {links.map((item, index) =>
+          item === 'Main' ? (
+            <li className="header__mob-point" key={index}>
+              <a href={`/`} className="header__mob-item" key={index}>
+                {item}
+              </a>
+            </li>
+          ) : (
+            <li className="header__mob-point" key={index}>
               <a
                 href={`/${item.toLocaleLowerCase()}`}
                 className="header__mob-item"
@@ -25,9 +31,9 @@ const HeaderMenu = ({ open }) => {
               >
                 {item}
               </a>
-            }
-          </li>
-        ))}
+            </li>
+          )
+        )}
       </ul>
     </nav>
   );
