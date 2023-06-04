@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutBlock.scss';
 import FirstTitle from '../ui/titles/FirstTitle';
-import Photo from '../../assets/photo.jpg';
+import Photo from '../../assets/photo.jpeg';
 import Illustration from '../../assets/about-ill.png';
 
 const AboutBlock = () => {

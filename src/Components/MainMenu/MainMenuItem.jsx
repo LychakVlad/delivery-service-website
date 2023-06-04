@@ -5,7 +5,7 @@ import './MainMenu.scss';
 
 const MainMenuItem = ({ img, title, text, btn, webp }) => {
   return (
-    <div>
+    <div className="main-menu__main">
       <div className="main-menu__wrapper">
         <FirstTitle title={title} className="title--white" />
         <p className="main-menu__text">{text}</p>

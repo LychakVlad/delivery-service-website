@@ -4,8 +4,6 @@
 .main-menu {
   border-radius: 40px;
   background: $BGBlue;
-  width: 100%;
-  min-height: 100%;
   overflow: hidden;
   position: relative;
   @include xlMaxBreakPoint {
@@ -34,7 +32,7 @@
     position: relative;
     z-index: 100;
     padding: 50px 60px;
-    min-height: 336px;
+    min-height: 400px;
 
     @include xlMaxBreakPoint {
       padding: 36px 24px 66px;
@@ -42,13 +40,12 @@
   }
 
   &__img {
-    width: 100%;
-    min-height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
-    object-position: 100% 100%;
+    object-position: center;
+    min-height: 400px;
 
     filter: brightness(60%);
   }

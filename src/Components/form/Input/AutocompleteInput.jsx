@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import useDebounce from '../../../hooks/useDebounce';
 import { fetchCities } from '../../../api/fetchCities';
 import SuggestionsList from './SuggestionsList/SuggestionsList';
 import SuggestionsLoad from './SuggestionsList/SuggestionsLoad';
+import SuggestionsNothing from './SuggestionsList/SuggestionsNothing';
 
 const AutocompleteInput = React.memo(
   ({
@@ -23,10 +24,25 @@ const AutocompleteInput = React.memo(
     const [isFilled, setIsFilled] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [nothing, setNothing] = useState(false);
+    const wrapperRef = useRef(null);
 
     useEffect(() => {
       setIsFilled(!!value);
     }, [value]);
+
+    useEffect(() => {
+      document.addEventListener('click', handleClickOutside);
+      return () => {
+        document.removeEventListener('click', handleClickOutside);
+      };
+    }, []);
+
+    const handleClickOutside = (event) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        setNothing(false);
+      }
+    };
 
     const handleSearch = useDebounce((searchTerm) => {
       if (searchTerm.length > 0) {
@@ -36,6 +52,11 @@ const AutocompleteInput = React.memo(
             const suggestions = response.data;
             setSuggestions(suggestions);
             setError(!suggestions.find((s) => s.display_name === searchTerm));
+            if (suggestions.length === 0) {
+              setNothing(true);
+            } else {
+              setNothing(false);
+            }
             if (
               suggestions.length > 0 &&
               suggestions[0].display_name === searchTerm
@@ -76,7 +97,7 @@ const AutocompleteInput = React.memo(
     };
 
     return (
-      <div className="input__wrapper">
+      <div className="input__wrapper" ref={wrapperRef}>
         <div
           className={`input-container  ${error ? 'error' : ''} ${
             className ? className : ''
@@ -116,6 +137,9 @@ const AutocompleteInput = React.memo(
             handleSelect={handleSelect}
             test="suggestion-item"
           />
+        )}
+        {nothing && suggestions.length === 0 && !loading && isFilled && (
+          <SuggestionsNothing />
         )}
 
         {description && <div className="input-description">{description}</div>}
