@@ -4,10 +4,14 @@ import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import './Header.scss';
 import { useLocation } from 'react-router-dom';
 import Dropdown from '../ui/dropdown/Dropdown';
+import BurgerIcon from './BurgerIcon';
+import HeaderMenu from './HeaderMenu';
+import { useDisableBodyScroll } from '../../hooks/useDisableBodyScroll';
 
 const Header = () => {
-  const [rounded, setRounded] = useState('');
+  const [rounded, setRounded] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [open, setOpen] = useState(false);
   let ref = useRef();
 
   let location = useLocation();
@@ -50,6 +54,20 @@ const Header = () => {
     { title: 'API', link: '/api' },
     { title: 'Widget', link: '/widget' },
   ];
+
+  const handleBurgerClick = () => {
+    setRounded(!rounded);
+    setOpen(!open);
+    if (open) {
+      document.body.classList.remove('active');
+      document.body.classList.add('not-active');
+    } else {
+      document.body.classList.remove('not-active');
+      document.body.classList.add('active');
+    }
+  };
+
+  useDisableBodyScroll(open);
 
   return (
     <header className={`header ${rounded ? 'header--rounded' : ''}`}>
@@ -121,17 +139,20 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-
-          <a
-            href="tel:+1123-456-7890"
-            className="call-icon"
-            aria-label="call icon"
-          >
-            <CallIcon key={1} />
-          </a>
+          <div className="header__icons">
+            <BurgerIcon onClick={handleBurgerClick} />
+            <a
+              href="tel:+1123-456-7890"
+              className="call-icon"
+              aria-label="call icon"
+            >
+              <CallIcon key={1} />
+            </a>
+          </div>
         </div>
         <div className="header__bottom"></div>
       </div>
+      <HeaderMenu open={open} />
     </header>
   );
 };
