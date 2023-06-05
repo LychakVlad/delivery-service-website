@@ -2,16 +2,16 @@
 
 <br />
 <div align="center">
-  <a href="https://example-delivery-service.netlify.app/" target='_blank'>
+  <a href="https://ex-drop-delivery.netlify.app/" target='_blank'>
     <img src="./src/assets/main-screen.png" alt="main-page-screen" width='900'>
 <h3 align="center">Delivery Service Website</h3>
   <p align="center">
     A web application for a delivery service built using React, SCSS, Jest, and a RESTful API.
     <br />
-    <a href="https://github.com/YourUsername/delivery-service-website"><strong>Explore the code »</strong></a>
+    <a href="https://github.com/LychakVlad/delivery-service-website"><strong>Explore the code »</strong></a>
     <br />
     <br />
-    <a href="https://example-delivery-service.netlify.app/">View Demo</a>
+    <a href="https://ex-drop-delivery.netlify.app/">View Demo</a>
   </p>
 </div>
 <!-- ABOUT THE PROJECT -->
