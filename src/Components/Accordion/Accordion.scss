@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0;
 
   font-style: normal;
   font-weight: 600;
@@ -53,7 +54,6 @@
 }
 
 .accordion__title {
-  margin-right: 20px;
   max-width: 470px;
 
   text-align: left;

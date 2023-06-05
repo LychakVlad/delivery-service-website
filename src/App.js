@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Main from './pages/Main';
 import Error from './pages/Error';
 import Widget from './pages/Widget';
@@ -14,7 +14,7 @@ import Partners from './pages/Partners';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<PageLayout />}>
             <Route path="/" element={<Main />} />
@@ -28,7 +28,7 @@ function App() {
           </Route>
           <Route path="*" element={<Error />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
